@@ -1,0 +1,37 @@
+[
+  {
+    "id": "E1",
+    "question": "¿Cuál es la jornada laboral anual en el convenio del metal?",
+    "expected_pdfs": ["metal.pdf"],
+    "should_answer": true,
+    "notes": "Pregunta factual directa con evidencia clara"
+  },
+  {
+    "id": "E2",
+    "question": "¿Existe regulación de teletrabajo en estos convenios?",
+    "expected_pdfs": ["fruta.pdf", "medicina.pdf", "educacion.pdf", "taxi.pdf", "pescanova.pdf", "electricista.pdf", "renault.pdf", "renfe.pdf", "restauracion.pdf", "madera.pdf", "hosteleria.pdf", "cemento.pdf", "consultora_tecnologica.pdf", "cepsa.pdf", "audiovisual.pdf", "metal.pdf", "mercadona.pdf", "textil.pdf", "construccion.pdf"],
+    "should_answer": true,
+    "notes": "Pregunta transversal, posible respuesta parcial"
+  },
+  {
+    "id": "E3",
+    "question": "¿Cuál es el salario base en el sector aeroespacial?",
+    "expected_pdfs": [],
+    "should_answer": false,
+    "notes": "Sector no cubierto por ningún convenio disponible"
+  },
+  {
+    "id": "E4",
+    "question": "¿Qué diferencia hay en los salarios base entre medicina y hostelería?",
+    "expected_pdfs": ["medicina.pdf", "hosteleria.pdf"],
+    "should_answer": true,
+    "notes": "Comparación multi-convenio"
+  },
+  {
+    "id": "E5",
+    "question": "Resume el artículo 99 del convenio del metal.",
+    "expected_pdfs": ["metal.pdf"],
+    "should_answer": false,
+    "notes": "Artículo inexistente, el sistema debe abstenerse"
+  }
+]
