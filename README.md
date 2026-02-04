@@ -280,7 +280,7 @@ pip install --upgrade pip setuptools wheel
 
 pip install torch transformers accelerate datasets
 
-pip install jupyter matplotlib pandas
+pip install jupyter matplotlib pandas python-dotenv
 
 ```
 
