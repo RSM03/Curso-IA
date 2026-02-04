@@ -69,6 +69,10 @@ pip install peft datasets evaluate
 # QLoRA y 4-bit
 pip install bitsandbytes
 
+# PDF y embeddings
+pip install pypdf sentence-transformers faiss-cpu
+
+
 ```
 
 Si hay GPU con CUDA compatible, torch suele detectarla solo. Para comprobarlo:
