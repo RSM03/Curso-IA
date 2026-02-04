@@ -15,27 +15,6 @@ Reglas obligatorias:
 </SYSTEM>
 
 <CONTEXT>
-[Fuente: metal.pdf | Página 59]
-es en aquellas actividades y sectores del metal 
-que trabajan en obras de construcción señaladas en el artículo 96.1. Igualmente, se 
-acredita con ella la categoría o grupo profesional de la persona trabajadora y los 
-periodos de ocupación en las distintas empresas contratistas en las que vaya ejerciendo 
-su actividad.
-2. La tarjeta, que se expedirá de acuerdo con el procedimiento establecido en los 
-artículos siguientes, se soporta en un formato físico según el modelo que se establezca 
-mediant
-
-[Fuente: metal.pdf | Página 70]
- (TPM) antes de la finalización de la vigencia del CEM.
-Disposición transitoria novena.
-Se recomienda a los negociadores de los convenios provinciales que a la hora de 
-rellanar las hojas estadísticas del REGCON tengan en cuenta el número de trabajadores 
-afiliados al Régimen General de la Seguridad Social que por CNAE se recoge en el 
-estudio «Mapa Sectorial del Metal en España» elaborado por Confemetal.
-ANEXO I
-Actividades económicas de la industria y los servicios del Metal (CNAE)
-09.10 Activ
-
 [Fuente: metal.pdf | Página 33]
 nción sanitaria a las 
 personas trabajadoras, la empresa se obliga a concertar un seguro médico para 
@@ -46,7 +25,53 @@ y teletrabajo
 Artículo 46. Duración máxima de la jornada laboral.
 La duración máxima de la jornada ordinaria de trabajo para el sector del metal será, 
 en cómputo anual, la establecida actualmente en los convenios colectivos sectoriales o 
-subsectoriales de 
+subsectoriales de ámbito inferior, enumerados en el artículo 10.2.
+Si se estableciesen convenios colectivos sectoriales, en el marco de una comunidad 
+autónoma, que sustituyan a los provinciales o subsectoriales existentes, dichos 
+convenios podrán acordar una jornada máxima anual única, de aplicación en todo el 
+ámbito del nuevo convenio colectivo sectorial.
+BOLETÍN OFICIAL DEL ESTADO
+Núm. 10 Miércoles 12 de enero de 2022 Sec. III.   Pág. 2926
+cve: BOE-A-2022-479
+Verificable en https://www.boe.es
+
+[Fuente: metal.pdf | Página 59]
+
+(artículo 10.3), las partes consideran la Tarjeta Profesional de la Construcción para el Sector 
+del Metal, como: «una forma de acreditación de la formación en prevención de riesgos 
+laborales por la persona trabajadora y que queda a su disposición».
+Artículo 98. Funciones de la tarjeta profesional.
+La Tarjeta Profesional de la Construcción para el Sector del Metal tiene las siguientes 
+funciones:
+a) Acreditar que su titular ha recibido al menos la formación inicial en materia de 
+prevención de riesgos laborales en aquellas actividades y sectores del Metal que 
+trabajan en obras de construcción, de acuerdo con lo previsto en el anexo IV del 
+presente convenio y en la Ley 32/2006, de 18 de octubre, reguladora de la 
+subcontratación en el Sector de la Construcción.
+b) Acreditar la categoría o grupo profesional de su titular y su experiencia 
+profesional.
+c) Acreditar la formación de todo tipo recibida por su titular.
+d) Facilitar el acceso de su titular a los servicios de la FMF.
+Artícu
+
+[Fuente: metal.pdf | Página 37]
+e igual valor.
+Diagnóstico de la situación retributiva de la empresa.
+Establecer un plan de actuación para corrección de desigualdades.
+Incluir un sistema de seguimiento y de implantación de mejoras.
+Las partes firmantes del convenio recomiendan utilizar la herramienta para el registro 
+retributivo del Ministerio de Trabajo y Economía Social.
+CAPÍTULO XII
+Igualdad
+Artículo 52. Igualdad de trato y oportunidades.
+El metal tradicionalmente es un sector masculinizado. La presencia laboral femenina 
+en la industria del metal, es minoritaria, el 13-14 % de las personas trabajadoras 
+ocupados en este sector en España son mujeres, en su mayoría en puestos 
+administrativos y como profesionales de apoyo.
+Para invertir la tendencia y favorecer la incorporación laboral de las mujeres en el 
+sector del metal, se requiere en primer lugar una formación profesional adecuada e 
+impulsar la inserción laboral de las desempleadas.
+Las organizaciones firmantes del convenio, conscientes de su responsabilida
 </CONTEXT>
 
 <USER>
@@ -54,7 +79,11 @@ subsectoriales de
 </USER>
 
 <ASSISTANT>
-La duración máxima de la jornada ordinaria de trabajo para el sector del metal será, en cómputo anual, la establecida actualmente en los convenios colectivos sectoriales o subsectoriales de . </ASSISTANT>
+La duración máxima de la jornada ordinaria de trabajo para el sector del metal será, en cómputo anual, la establecida actualmente en los convenios colectivos sectoriales o subsectoriales de ámbito inferior, enumerados en el artículo 10.2. 
+Si se estableciesen convenios colectivos sectoriales, en el marco de una comunidad autónoma, que sustituyan a los provinciales o subsectoriales existentes, dichos convenios podrán acordar una jornada máxima anual única, de aplicación en todo el ámbito del nuevo convenio colectivo sectorial. 
+
+
+</ASSISTANT>
 
 ---------------
 
@@ -75,32 +104,50 @@ Reglas obligatorias:
 </SYSTEM>
 
 <CONTEXT>
+[Fuente: hosteleria.pdf | Página 2]
+ Española de Hostelería –
+FEHR– (denominación anterior) y la Confederación Española de Hoteles y Alojamientos 
+Turísticos –CEHAT–, en su condición de interlocutores sociales más representativos del 
+sector laboral de hostelería, convencidos de la necesidad de contar con unas bases de 
+contratación colectiva en el sector de hostelería en el ámbito estatal, para la mejor 
+defensa de esta importantísima industria de nuestro país, y de los intereses de las 
+personas trabajadoras y de las empresas, que a cada parte les resultan propios, han ido 
+renovando y ampliando a través del diálogo y la concertación social el acervo normativo 
+convencional sectorial de hostelería para todo el ámbito territorial estatal.
+En este mismo marco se logró un nuevo acuerdo en materia de periodo de prueba, 
+firmado en la ciudad de Palma de Mallorca (Illes Balears), en el año 2006, pacto 
+publicado en el BOE de 27 de julio de 2006. Asimismo, y en cumplimiento de la 
+disposición adicional segunda del ALEH III se
+
 [Fuente: hosteleria.pdf | Página 6]
 Se incluyen en el sector de hostelería las empresas, cualquiera que sea su titularidad 
 y objeto social, que realicen en instalaciones fijas o móviles, ya sea de manera 
 permanente, estacional o temporal, actividades de alojamiento de clientes en hoteles, 
 hostales, residencias, viviendas comercializadas con fines turísticos, apartamentos que 
 presten algún servicio hostelero, balnearios, albergues, pensiones, moteles, alojamientos 
-rurales, centros de camping y, en general, todos aquellos estab
-
-[Fuente: hosteleria.pdf | Página 14]
-or las 
-empresas de hostelería con carácter complementario a la actividad principal hostelera.
-Artículo 15. Ocupaciones y puestos de trabajo de las áreas funcionales.
-Al objeto de facilitar el encuadre en el grupo profesional correspondiente, las distintas 
-tareas, funciones, especialidades profesionales o responsabilidades derivadas de las 
-distintas aptitudes, titulaciones y contenido general de la prestación laboral, según la 
-nomenclatura empírica basada en los usos y costumbres en el sector
+rurales, centros de camping y, en general, todos aquellos establecimientos que presten 
+servicios de hospedaje a clientes; asimismo, se incluyen las empresas que presten 
+actividades de servicio de comida y bebida para su consumo por el cliente, en 
+restaurantes, catering, comedores colectivos, cadenas de restauración moderna; locales 
+de comida rápida: pizzerías, hamburgueserías, bocadillerías, creperías; cafés, bares, 
+cafeterías, cervecerías, tabernas, freidurías, chiringuitos de playa, pubs, terrazas de 
+veladores, quioscos, cruasanterías, heladerías, c
 
 [Fuente: hosteleria.pdf | Página 54]
-ción general del sector de hostelería y 
+desarrollo de acciones de mejora de la salud laboral y la seguridad en el 
+trabajo, de impulso y desarrollo de las relaciones socio laborales en el sector de 
+hostelería y el turismo, contribuyendo a la mejora del diálogo social en todos los ámbitos 
+de negociación colectiva en el sector, y de promoción general del sector de hostelería y 
 el turismo.
 2. La Fundación Laboral Hostelería y Turismo se encuentra inscrita en el Registro 
 de Fundaciones Laborales dependiente del Ministerio de Empleo y Seguridad Social, 
 mediante Orden ESS/1970/2012, de 2 de agosto (BOE de 19 de septiembre).
 3. El ámbito de actuación de la Fundación Laboral Hostelería y Turismo se 
 corresponde con el ámbito de aplicación del presente Acuerdo, que se extiende al sector 
-de hostelería de España, de conformidad y en 
+de hostelería de España, de conformidad y en los términos contenidos en sus Estatutos.
+Disposición adicional segunda. Personal de hostelería que preste servicios en salas de 
+fiesta, baile y discotecas.
+Las personas trabajadoras que presten sus 
 </CONTEXT>
 
 <USER>

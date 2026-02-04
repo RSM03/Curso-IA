@@ -9,8 +9,8 @@ PDF_DIR = "BOE"
 STORE_DIR = "rag_store"
 os.makedirs(STORE_DIR, exist_ok=True)
 
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 100
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 300
 
 def chunk_text(text, size, overlap):
     chunks = []

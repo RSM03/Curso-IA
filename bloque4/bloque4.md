@@ -34,9 +34,10 @@ Para ello haremos una tool decide qué PDF es el más adecuado
 
 Creamos **description.json**, un fichero determinista, auditable y cerrado, que el modelo solo puede leer, no modificar.
 
-5. Definición conceptual de la tool
+5. Creación de la tool e integración con RAG
 
-Nombre: select_convenio_pdf
+Nombre: select_convenio
+Archivo: **bloque4.py**
 Responsabilidad única:
 Dada una pregunta, decidir qué PDF es relevante o declarar que ninguno aplica.
 
@@ -46,3 +47,13 @@ Principios de seguridad:
 * Dominio cerrado
 * Decisión explícita
 * Posibilidad de “no sé”
+
+6. Análisis del bloque 4
+
+Cada grupo debe demostrar con ejemplos:
+
+* Casos donde antes fallaba y ahora no responde
+* Casos donde elige correctamente el convenio
+* Casos ambiguos donde responde NONE
+* Casos límite entre hostelería / restauración / turismo
+* Qué errores siguen sin resolverse
