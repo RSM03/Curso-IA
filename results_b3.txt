@@ -1,0 +1,161 @@
+QUESTION:
+¿Cuál es la duración máxima del contrato según el convenio del metal?
+ANSWER:
+
+<SYSTEM>
+
+Eres un asistente académico riguroso especializado en normativa laboral.
+Solo puedes responder utilizando el CONTEXTO proporcionado.
+Si el contexto no contiene la información necesaria, debes decir explícitamente que no lo sabes.
+No debes inferir, completar ni inventar información.
+
+</SYSTEM>
+
+<CONTEXT>
+[Fuente: consultora tecnologica.pdf | Página 13]
+a estas circunstancias de la 
+producción, su duración no podrá ser superior a seis meses. En caso de que el contrato 
+se hubiera concertado por una duración inferior a la máxima legal o convencionalmente 
+establecida, podrá prorrogarse, mediante acuerdo de las partes, por una única vez, sin 
+que la duración total del contrato pueda exceder de dicha duración máxima.
+Artículo 18. Trabajos de Grupo o Nivel Superior.
+1. Cuando existan razones técnicas y organizativas y por el tiempo imprescindible 
+
+
+[Fuente: cemento.pdf | Página 9]
+exto refundido del Estatuto 
+de los Trabajadores, cuando el contrato de duración determinada obedezca a estas 
+circunstancias de la producción, su duración no podrá ser superior a un año. En caso de 
+que el contrato se hubiera concertado por una duración inferior a la máxima legal o 
+convencionalmente establecida, podrá prorrogarse, mediante acuerdo de las partes, por 
+una única vez, sin que la duración total del contrato pueda exceder de dicha duración 
+máxima.
+b) Se expresará en los mismos, co
+
+[Fuente: madera.pdf | Página 13]
+ualificadas y activas en el registro correspondiente.
+b) La duración mínima del contrato será de seis meses y la máxima de tres. En caso 
+de que el contrato se hubiera concertado por una duración inferior a la máxima legal 
+indicada anteriormente, podrá prorrogarse mediante acuerdo de las partes, hasta por dos 
+veces, sin que la duración de cada prórroga pueda ser inferior a seis meses y sin que la 
+duración total del contrato pueda exceder de tres años.
+Las situaciones de incapacidad temporal, 
+</CONTEXT>
+
+<USER>
+¿Cuál es la duración máxima del contrato según el convenio del metal?
+</USER>
+
+<ASSISTANT>
+No lo sé. El contexto no contiene información sobre el convenio del metal. 
+</ASSISTANT>
+
+---------------
+
+QUESTION:
+¿Qué dice el BOE sobre teletrabajo en estos convenios?
+ANSWER:
+
+<SYSTEM>
+
+Eres un asistente académico riguroso especializado en normativa laboral.
+Solo puedes responder utilizando el CONTEXTO proporcionado.
+Si el contexto no contiene la información necesaria, debes decir explícitamente que no lo sabes.
+No debes inferir, completar ni inventar información.
+
+</SYSTEM>
+
+<CONTEXT>
+[Fuente: cepsa.pdf | Página 41]
+ndo 
+como referencia el horario vigente en cada momento en su centro de trabajo.
+Durante el día de teletrabajo la persona empleada se habrá de mantener localizable 
+y disponible para cualquier tipo de comunicación y contacto, dentro de su horario 
+habitual. También podrá solicitarse puntualmente que acuda al centro de trabajo en su 
+día de teletrabajo por causas organizativas justificadas, lo que se deberá notificar con la 
+mayor antelación posible.
+– El teletrabajo tiene carácter reversible gar
+
+[Fuente: cepsa.pdf | Página 41]
+ de su 
+ámbito de gestión. También establecerán los criterios para la distribución del tiempo de 
+teletrabajo, que será como mínimo por días completos.
+En todo caso, el régimen de trabajo de la persona empleada en sus días de 
+teletrabajo será el que habitualmente viene desarrollando de manera presencial, ya sea 
+en lo referente a jornada, horario, vacaciones, como en el resto de condiciones, tomando 
+como referencia el horario vigente en cada momento en su centro de trabajo.
+Durante el día de t
+
+[Fuente: cepsa.pdf | Página 41]
+rrogarse por periodos de igual duración, una vez se realice la valoración 
+de la adaptación a esta modalidad de trabajo.
+– El teletrabajo se realizará en el lugar informado por la persona empleada en el 
+acuerdo de teletrabajo, permitiéndose como lugares destinados para este teletrabajo, 
+tanto el domicilio particular como la segunda residencia de carácter permanente de la 
+persona empleada, dentro del territorio nacional.
+– Jornada en régimen de trabajo a distancia.
+Se establece como referencia
+</CONTEXT>
+
+<USER>
+¿Qué dice el BOE sobre teletrabajo en estos convenios?
+</USER>
+
+<ASSISTANT>
+No lo sé. </ASSISTANT>
+
+---------------
+
+QUESTION:
+Resume el artículo 15 del convenio de hostelería.
+ANSWER:
+
+<SYSTEM>
+
+Eres un asistente académico riguroso especializado en normativa laboral.
+Solo puedes responder utilizando el CONTEXTO proporcionado.
+Si el contexto no contiene la información necesaria, debes decir explícitamente que no lo sabes.
+No debes inferir, completar ni inventar información.
+
+</SYSTEM>
+
+<CONTEXT>
+[Fuente: hosteleria.pdf | Página 54]
+ación del presente Acuerdo, que se extiende al sector 
+de hostelería de España, de conformidad y en los términos contenidos en sus Estatutos.
+Disposición adicional segunda. Personal de hostelería que preste servicios en salas de 
+fiesta, baile y discotecas.
+Las personas trabajadoras que presten sus servicios laborales por cuenta ajena en 
+las actividades recogidas en el artículo 4 del presente ALEH VI (ámbito funcional), y 
+estén encuadrados o adscritos a los grupos profesionales (artículo 12), 
+
+[Fuente: restauracion.pdf | Página 26]
+Convenio de Hostelería Especialidad
+Ourense.
+Los festivos se abonarán según lo establecido en el Convenio Colectivo de Hostelería de la provincia de Ourense de 
+procedencia, y sin perjuicio de lo establecido en el art.47 del Real Decreto 2001/1983, de 28 de Julio, sobre 
+regulación de la jornada de trabajo, jornadas especiales y descansos. A todos los efectos, el 27 de julio, día de Santa 
+Marta, patrona de la industria hotelera, el 24 de diciembre día de Nochebuena y el 16 de noviembre se consi
+
+[Fuente: hosteleria.pdf | Página 9]
+del apartado 7, del artículo 13 del VI 
+ASAC.
+Artículo 10. Estructura de la negociación colectiva.
+1. El presente Acuerdo, además de su condición de convenio colectivo sobre 
+materias concretas, tiene naturaleza de acuerdo marco y de estructura, de los regulados 
+en el artículo 83.2 del Estatuto de los Trabajadores.
+2. Este Acuerdo ostenta una posición de renovada preeminencia en el sistema de 
+negociación colectiva en el sector de hostelería, siendo el mismo el único con 
+competencia en todo el
+</CONTEXT>
+
+<USER>
+Resume el artículo 15 del convenio de hostelería.
+</USER>
+
+<ASSISTANT>
+No tengo acceso a la información del artículo 15 del convenio de hostelería. 
+</ASSISTANT>
+
+---------------
+
