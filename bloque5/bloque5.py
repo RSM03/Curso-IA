@@ -13,7 +13,7 @@ from datetime import datetime
 STORE_DIR = "rag_store"
 DESC_FILE = "bloque4/description.json"
 TOP_K = 3
-LOG_FILE = "agent_log.txt"
+LOG_FILE = "results/agent_log_b5.txt"
 
 # =============================
 # LOAD DATA
@@ -31,7 +31,7 @@ embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 base_model = AutoModelForCausalLM.from_pretrained(
     "google/gemma-2-9b-it",
     device_map="auto",
-    torch_dtype=torch.float16
+    dtype=torch.float16
 )
 model = PeftModel.from_pretrained(base_model, "./lora_model")
 tokenizer = AutoTokenizer.from_pretrained("./lora_model")
@@ -134,7 +134,6 @@ class MultiAgent:
     def log(self, action, detail):
         entry = f"{datetime.now().isoformat()} | {action} | {detail}"
         self.logs.append(entry)
-        print(entry)
         with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(entry + "\n")
 
@@ -190,8 +189,7 @@ results = ""
 for q in questions:
     answer = agent.act(q)
     text = f"QUESTION:\n{q}\nANSWER:\n{answer}\n{'-'*15}\n\n"
-    print(text)
     results += text
 
-with open("results_b5.txt", "w") as f:
+with open("results/results_b5.txt", "w") as f:
     f.write(results)

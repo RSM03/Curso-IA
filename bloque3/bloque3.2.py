@@ -92,5 +92,5 @@ for q in questions:
     text = f"QUESTION:\n{q}\nANSWER:\n{ask_rag(q)}\n{'-'*15}\n\n"
     print(text)
     results += text
-with open("results_b3.txt","w") as file:
+with open("results/results_b3.txt","w") as file:
     file.write(results)

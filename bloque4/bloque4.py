@@ -37,7 +37,7 @@ embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 base_model = AutoModelForCausalLM.from_pretrained(
     "google/gemma-2-9b-it",
     device_map="auto",
-    torch_dtype=torch.float16
+    dtype=torch.float16
 )
 model = PeftModel.from_pretrained(base_model, "./lora_model")
 tokenizer = AutoTokenizer.from_pretrained("./lora_model")
@@ -191,5 +191,5 @@ for q in questions:
     text = f"QUESTION:\n{q}\nANSWER:\n{answer_question(q)}\n{'-'*15}\n\n"
     print(text)
     results += text
-with open("results_b4.txt","w") as file:
+with open("results/results_b4.txt","w") as file:
     file.write(results)
