@@ -4,13 +4,14 @@ import torch
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
+import re
 
 # =============================
 # CONFIG
 # =============================
 
 STORE_DIR = "rag_store"
-DESC_FILE = "description.json"
+DESC_FILE = "bloque4/description.json"
 TOP_K = 3
 
 # =============================
@@ -81,18 +82,25 @@ Responde únicamente con el nombre exacto del PDF o NONE.
     outputs = model.generate(
         **inputs,
         max_new_tokens=30,
-        temperature=0.0,
         do_sample=False
     )
 
-    decision = tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
+    raw_answer = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-    if decision == "NONE":
-        return None
-    if decision not in convenio_descriptions:
-        raise ValueError(f"PDF no permitido: {decision}")
+    # Regex para extraer un PDF válido o NONE
+    match = re.search(r'<ASSISTANT>\s*([a-zA-Z0-9_]+\.pdf|NONE)\s*</ASSISTANT>', raw_answer)
 
-    return decision
+    if match:
+        decision = match.group(1).strip()
+        print("FUNCION SELECCIONADA:",decision)
+    else:
+        print(f"Ha fallado el regex {'-'*30}\n{raw_answer}\n{'-'*30}")
+        decision = "INVALID"
+
+    if decision == "INVALID":
+        raise ValueError(f"PDF no permitido: {raw_answer}")
+
+    return None if decision == "NONE" else decision
 
 # =============================
 # RAG RESTRICTED BY PDF
@@ -178,7 +186,10 @@ questions = [
     "¿Cuál es el salario base en el sector aeroespacial?"
 ]
 
+results = ""
 for q in questions:
-    print("Q:", q)
-    print("A:", answer_question(q))
-    print("-" * 60)
+    text = f"QUESTION:\n{q}\nANSWER:\n{answer_question(q)}\n{'-'*15}\n\n"
+    print(text)
+    results += text
+with open("results_b4.txt","w") as file:
+    file.write(results)

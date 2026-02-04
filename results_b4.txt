@@ -1,0 +1,126 @@
+QUESTION:
+¿Cuál es la jornada laboral anual en el convenio del metal?
+ANSWER:
+
+<SYSTEM>
+
+Eres un asistente académico riguroso especializado en convenios colectivos.
+
+Reglas obligatorias:
+- Solo puedes usar la información del CONTEXTO.
+- Si el contexto no contiene la respuesta, di explícitamente que no lo sabes.
+- No completes ni infieras información.
+- No mezcles convenios.
+
+</SYSTEM>
+
+<CONTEXT>
+[Fuente: metal.pdf | Página 59]
+es en aquellas actividades y sectores del metal 
+que trabajan en obras de construcción señaladas en el artículo 96.1. Igualmente, se 
+acredita con ella la categoría o grupo profesional de la persona trabajadora y los 
+periodos de ocupación en las distintas empresas contratistas en las que vaya ejerciendo 
+su actividad.
+2. La tarjeta, que se expedirá de acuerdo con el procedimiento establecido en los 
+artículos siguientes, se soporta en un formato físico según el modelo que se establezca 
+mediant
+
+[Fuente: metal.pdf | Página 70]
+ (TPM) antes de la finalización de la vigencia del CEM.
+Disposición transitoria novena.
+Se recomienda a los negociadores de los convenios provinciales que a la hora de 
+rellanar las hojas estadísticas del REGCON tengan en cuenta el número de trabajadores 
+afiliados al Régimen General de la Seguridad Social que por CNAE se recoge en el 
+estudio «Mapa Sectorial del Metal en España» elaborado por Confemetal.
+ANEXO I
+Actividades económicas de la industria y los servicios del Metal (CNAE)
+09.10 Activ
+
+[Fuente: metal.pdf | Página 33]
+nción sanitaria a las 
+personas trabajadoras, la empresa se obliga a concertar un seguro médico para 
+asegurar la atención sanitaria en el país de destino.
+CAPÍTULO X
+Jornada máxima anual de trabajo. Registro de Jornada, trabajo a distancia 
+y teletrabajo
+Artículo 46. Duración máxima de la jornada laboral.
+La duración máxima de la jornada ordinaria de trabajo para el sector del metal será, 
+en cómputo anual, la establecida actualmente en los convenios colectivos sectoriales o 
+subsectoriales de 
+</CONTEXT>
+
+<USER>
+¿Cuál es la jornada laboral anual en el convenio del metal?
+</USER>
+
+<ASSISTANT>
+La duración máxima de la jornada ordinaria de trabajo para el sector del metal será, en cómputo anual, la establecida actualmente en los convenios colectivos sectoriales o subsectoriales de . </ASSISTANT>
+
+---------------
+
+QUESTION:
+¿Qué dice el convenio de hostelería sobre turnos partidos?
+ANSWER:
+
+<SYSTEM>
+
+Eres un asistente académico riguroso especializado en convenios colectivos.
+
+Reglas obligatorias:
+- Solo puedes usar la información del CONTEXTO.
+- Si el contexto no contiene la respuesta, di explícitamente que no lo sabes.
+- No completes ni infieras información.
+- No mezcles convenios.
+
+</SYSTEM>
+
+<CONTEXT>
+[Fuente: hosteleria.pdf | Página 6]
+Se incluyen en el sector de hostelería las empresas, cualquiera que sea su titularidad 
+y objeto social, que realicen en instalaciones fijas o móviles, ya sea de manera 
+permanente, estacional o temporal, actividades de alojamiento de clientes en hoteles, 
+hostales, residencias, viviendas comercializadas con fines turísticos, apartamentos que 
+presten algún servicio hostelero, balnearios, albergues, pensiones, moteles, alojamientos 
+rurales, centros de camping y, en general, todos aquellos estab
+
+[Fuente: hosteleria.pdf | Página 14]
+or las 
+empresas de hostelería con carácter complementario a la actividad principal hostelera.
+Artículo 15. Ocupaciones y puestos de trabajo de las áreas funcionales.
+Al objeto de facilitar el encuadre en el grupo profesional correspondiente, las distintas 
+tareas, funciones, especialidades profesionales o responsabilidades derivadas de las 
+distintas aptitudes, titulaciones y contenido general de la prestación laboral, según la 
+nomenclatura empírica basada en los usos y costumbres en el sector
+
+[Fuente: hosteleria.pdf | Página 54]
+ción general del sector de hostelería y 
+el turismo.
+2. La Fundación Laboral Hostelería y Turismo se encuentra inscrita en el Registro 
+de Fundaciones Laborales dependiente del Ministerio de Empleo y Seguridad Social, 
+mediante Orden ESS/1970/2012, de 2 de agosto (BOE de 19 de septiembre).
+3. El ámbito de actuación de la Fundación Laboral Hostelería y Turismo se 
+corresponde con el ámbito de aplicación del presente Acuerdo, que se extiende al sector 
+de hostelería de España, de conformidad y en 
+</CONTEXT>
+
+<USER>
+¿Qué dice el convenio de hostelería sobre turnos partidos?
+</USER>
+
+<ASSISTANT>
+No lo sé. 
+</ASSISTANT>
+---------------
+
+QUESTION:
+¿Existe regulación de teletrabajo en estos convenios?
+ANSWER:
+No puedo determinar el convenio aplicable con la información disponible.
+---------------
+
+QUESTION:
+¿Cuál es el salario base en el sector aeroespacial?
+ANSWER:
+No puedo determinar el convenio aplicable con la información disponible.
+---------------
+
