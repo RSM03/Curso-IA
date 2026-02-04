@@ -97,22 +97,62 @@ El juez no decide si “le gusta” la respuesta, decide si **cumple criterios t
 
 ---
 
-## 6. Arquitectura del sistema de evaluación
+## 6. Formato contractual de la respuesta evaluable
 
-Pipeline recomendado:
+A partir de este bloque, **la respuesta del sistema tiene un contrato formal**.
 
-1. Ejecutar el agente sobre el dataset
-2. Guardar:
-   - Respuesta
-   - Convenios usados
-   - Logs del agente
-3. Evaluar automáticamente:
-   - Abstención correcta
-   - Uso de fuentes
-4. Evaluar con LLM-as-a-judge:
-   - Corrección factual
-   - Uso del contexto
-5. Agregar métricas globales
+La única parte evaluable de la salida del modelo es el texto contenido entre:
+
+<ASSISTANT>
+...
+</ASSISTANT>
+
+Todo lo que quede fuera:
+- Tokens residuales
+- Repeticiones del prompt
+- Texto de contexto
+- Artefactos del modelo
+
+**NO forma parte de la respuesta** y debe ser ignorado.
+
+---
+
+### 6.1 Regla obligatoria de evaluación
+
+Antes de evaluar una respuesta, el sistema debe:
+
+1. Extraer el contenido entre `<ASSISTANT>` y `</ASSISTANT>`
+2. Si el patrón no existe → la respuesta es inválida
+3. Si el contenido está vacío → la respuesta es inválida
+4. Solo el contenido extraído pasa a:
+   - evaluación automática
+   - LLM-as-a-judge
+
+Esto fuerza disciplina de salida y evita evaluar basura generativa.
+
+---
+
+### 6.2 Implicación de diseño
+
+Este requisito tiene consecuencias importantes:
+
+- El agente **debe** producir salidas bien formadas
+- Los errores de formato son errores del sistema
+- La evaluación detecta problemas de orquestación, no solo de contenido
+
+Un sistema que “responde bien pero no cumple el formato” **suspende el bloque**.
+
+---
+
+### 6.3 Pregunta clave para el análisis
+
+Cada grupo debe responder:
+
+- ¿Cuántas respuestas fallan por formato?
+- ¿Por qué falla el formato?
+- ¿Es un problema del prompt, del modelo o del agente?
+
+Este análisis es tan importante como la métrica factual.
 
 ---
 

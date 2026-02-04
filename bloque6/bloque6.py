@@ -24,7 +24,7 @@ with open(EVAL_FILE, "r", encoding="utf-8") as f:
 judge_base = AutoModelForCausalLM.from_pretrained(
     "google/gemma-2-9b-it",
     device_map="auto",
-    torch_dtype=torch.float16
+    dtype=torch.float16
 )
 judge_model = PeftModel.from_pretrained(judge_base, "./lora_model")
 judge_tokenizer = AutoTokenizer.from_pretrained("./lora_model")

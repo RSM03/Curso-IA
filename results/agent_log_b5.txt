@@ -4440,3 +4440,777 @@ Espero que esta información te sea útil.
 2026-02-04T16:31:09.759537 | QUESTION | ¿Cuál es el salario base en el sector aeroespacial?
 2026-02-04T16:31:10.171935 | SELECT_CONVENIOS | []
 2026-02-04T16:31:10.172027 | FALLBACK_SELECT_CONVENIOS | ['audiovisual.pdf', 'consultora_tecnologica.pdf', 'hosteleria.pdf', 'metal.pdf', 'restauracion.pdf', 'cemento.pdf', 'educacion.pdf', 'madera.pdf', 'pescanova.pdf', 'taxi.pdf', 'cepsa.pdf', 'electricista.pdf', 'medicina.pdf', 'renault.pdf', 'textil.pdf', 'construccion.pdf', 'fruta.pdf', 'mercadona.pdf', 'renfe.pdf']
+2026-02-04T16:31:19.174128 | ANSWER | <SYSTEM>
+Eres un asistente académico riguroso especializado en convenios colectivos.
+Debes integrar información de todos los convenios relevantes.
+Solo puedes usar el CONTEXTO recuperado.
+Si no hay suficiente información, abstente de responder.
+</SYSTEM>
+<CONTEXT>[Fuente: audiovisual.pdf | Página 13]
+u realización, o a la finalización de su contrato si fuera de 
+duración inferior, a las personas trabajadoras y a la representación social de la empresa, 
+en su caso, quienes podrán efectuar las reclamaciones que consideren oportunas ante el 
+departamento correspondiente de la empresa.
+Artículo 20. Desplazamientos y transportes.
+1. Si el lugar de citación está situado fuera del municipio en que radica el centro de 
+actividades de la producción, o si el equipo de rodaje o grabación hubiera de viajar a una 
+localización distante, la empresa podrá optar entre:
+a) Facilitar a las personas trabajadoras un medio de transporte, teniendo en cuenta 
+que si el traslado es por carretera se hará en un número suficiente de vehículos 
+destinados al transporte de pasajeros o automóviles. Si el traslado es en tren, se hará, si 
+es un viaje diurno, en clase turista o superior, y si es un viaje nocturno, en cabina de uso 
+individual. Si el traslado es en avión, se hará en clase turista o superior. Si el
+
+[Fuente: audiovisual.pdf | Página 16]
+el orden normativo o convencional de referencia, a salvo de las 
+previsiones expresas en contrario que se recojan en el presente convenio.
+6. En el supuesto de extinción de la relación laboral, junto con el salario devengado 
+en el mes de finalización de la prestación de servicios, se abonará a la persona 
+trabajadora la parte proporcional de vacaciones y descanso semanal que corresponda 
+en atención al tiempo de prestación de servicios.
+Artículo 27. Salario base.
+1. El salario base será el salario mínimo que corresponde abonar a la persona 
+trabajadora, en función de su grupo y especialidad profesional, por la realización de la 
+jornada completa de trabajo, tal como se define en el título V del presente convenio, con 
+independencia de cualquier otra circunstancia objetiva o subjetiva que concurra en su 
+puesto de trabajo o en su persona.
+2. El salario base de las personas trabajadoras comprendidos en este convenio se 
+establece en su anexo I, titulado Tablas Salariales, Grupos Profesi
+
+[Fuente: consultora_tecnologica.pdf | Página 34]
+ontratado 
+con posterioridad a la entrada en vigor del XVII Convenio Colectivo, quienes deberán de 
+ser encuadradas de conformidad con los parámetros funcionales que se establecen en el 
+Sistema de Clasificación Profesional del presente convenio colectivo.
+El tratamiento salarial a futuro de los salarios base y plus convenio definidos en las 
+Tablas siguientes será el mismo que tengan los salarios base y plus convenio de futuros 
+convenios colectivos.
+Disposición adicional primera.  Formación a nivel del sector. Comisión paritaria de 
+formación sectorial.
+Las partes firmantes del presente convenio, siendo plenamente conscientes de la 
+trascendencia de la formación y la cualificación profesional de los trabajadores y 
+trabajadoras del sector, asumen el contenido íntegro del Acuerdo Nacional de Formación 
+Continua en la edición vigente, que desarrolla sus efectos en el ámbito funcional del 
+presente Convenio colectivo.
+BOLETÍN OFICIAL DEL ESTADO
+Núm. 92 Miércoles 16 de abril de 2025 Sec.
+
+[Fuente: consultora_tecnologica.pdf | Página 37]
+a por ninguna causa 
+o circunstancia, salvo en lo anteriormente detallado.
+Disposición adicional sexta.  Tratamiento salarial de los complementos «ex salario 
+base» y «ex plus convenio» del XVII convenio colectivo Estatal de Empresas de 
+Consultoría y Estudios de Mercado y de la Opinión Pública.
+Los complementos «ex salario base» y «ex plus convenio» que estuviesen 
+percibiendo las personas trabajadoras fruto de la aplicación de la disposición transitoria 
+cuarta del XVII Convenio Colectivo Estatal de Empresas de Consultoría y Estudios de 
+Mercado y de la Opinión Pública, podrán ser compensados y absorbidos, para adaptarse 
+a la estructura salarial y cuantías de los nuevos salarios del Área/Grupo/Nivel 
+establecidos en el anexo I, correspondiente a las tablas salariales.
+La compensación y absorción señalada anteriormente, de los «ex salario base» y 
+«ex plus convenio», se producirá, si una vez aplicados los incrementos salariales de las 
+tablas recogidas en el anexo I, junto con los re
+
+[Fuente: hosteleria.pdf | Página 34]
+para el empleo que se realice en sus 
+respectivos ámbitos.
+c) Fijar los criterios orientativos y las prioridades generales de la formación sectorial 
+dirigida a las personas trabajadoras, y establecer el plan de referencia sectorial.
+d) Participar y colaborar en actividades, estudios o investigaciones de carácter 
+sectorial y realizar propuestas en relación con el Sistema Nacional de Cualificaciones y 
+Formación Profesional y los centros de referencia nacional correspondientes a sus 
+respectivos ámbitos.
+e) Elaborar una memoria anual sobre la formación correspondiente a sus ámbitos.
+f) Conocer de la agrupación de empresas en su sector prevista en la legislación 
+vigente.
+g) Cualesquiera otras que les sean atribuidas por la normativa actual y aquellas que 
+se establezcan en el futuro.
+4. Funciones complementarias. Además de las funciones anteriores, la Comisión 
+tendrá las siguientes:
+a) Establecer criterios que faciliten la vinculación de la formación profesional para el 
+empleo en el 
+
+[Fuente: hosteleria.pdf | Página 22]
+ificaciones. Implicarse activamente en los planes de seguridad y 
+salud laboral.
+e) Jefe/a Sector: realizar de manera cualificada las funciones de control y 
+supervisión de su sector de responsabilidad y de las tareas a realizar a la vista del 
+cliente. Las mismas del camarero/a, y además, ocuparse de preparar y decorar las salas 
+y mesas del restaurante. Colaborar en recibir, despedir, ubicar y aconsejar a los clientes 
+sobre los menús y las bebidas. Realizar trabajos a la vista del cliente (flambear, cortar, 
+trinchar, desespinar, etcétera). Revisar los objetos de uso corriente. Almacenar y 
+controlar las mercancías y objetos de uso corriente en el ámbito del restaurante. 
+Facturación y cobro al cliente, así como cuadre y liquidación de la recaudación en su 
+sección.
+f) Camarero/a: ejecutar de manera cualificada, autónoma y responsable, el servicio 
+y venta de alimentos y bebidas. Preparar las áreas de trabajo para el servicio. Realizar la 
+atención directa al cliente para el consumo
+
+[Fuente: metal.pdf | Página 35]
+
+en el seno de la empresa.
+CAPÍTULO XI
+Salario sectorial e igualdad retributiva
+Artículo 50. Salario del sector.
+El salario mínimo sectorial para cada grupo, nivel o categoría profesional será el 
+último salario establecido en el correspondiente convenio sectorial de aplicación en las 
+empresas en que aquel salario sea de aplicación.
+Se respetarán a título individual o colectivo las condiciones más beneficiosas que se 
+hubieran pactado.
+Las empresas están obligadas a pagar por la prestación de un trabajo de igual valor 
+la misma retribución, satisfecha directa o indirectamente, y cualquiera que sea la 
+naturaleza de la misma, salarial o extrasalarial, sin que pueda producirse discriminación 
+alguna por razón de sexo en ninguno de los elementos o condiciones de aquella.
+Un trabajo tendrá igual valor que otro cuando la naturaleza de las funciones o tareas 
+efectivamente encomendadas, las condiciones educativas, profesionales o de formación 
+exigidas para su ejercicio, los factores estric
+
+[Fuente: metal.pdf | Página 33]
+nción sanitaria a las 
+personas trabajadoras, la empresa se obliga a concertar un seguro médico para 
+asegurar la atención sanitaria en el país de destino.
+CAPÍTULO X
+Jornada máxima anual de trabajo. Registro de Jornada, trabajo a distancia 
+y teletrabajo
+Artículo 46. Duración máxima de la jornada laboral.
+La duración máxima de la jornada ordinaria de trabajo para el sector del metal será, 
+en cómputo anual, la establecida actualmente en los convenios colectivos sectoriales o 
+subsectoriales de ámbito inferior, enumerados en el artículo 10.2.
+Si se estableciesen convenios colectivos sectoriales, en el marco de una comunidad 
+autónoma, que sustituyan a los provinciales o subsectoriales existentes, dichos 
+convenios podrán acordar una jornada máxima anual única, de aplicación en todo el 
+ámbito del nuevo convenio colectivo sectorial.
+BOLETÍN OFICIAL DEL ESTADO
+Núm. 10 Miércoles 12 de enero de 2022 Sec. III.   Pág. 2926
+cve: BOE-A-2022-479
+Verificable en https://www.boe.es
+
+[Fuente: metal.pdf | Página 29]
+ncluirá en este convenio.
+Los convenios colectivos sectoriales de ámbito inferior o, en su defecto, los 
+convenios colectivos o acuerdos de empresa, podrán establecer criterios por los que los 
+cambios de lugar de trabajo, de un centro a otro, puedan o no tener la consideración de 
+movilidad geográfica, respetando los derechos adquiridos de las personas trabajadoras.
+Los representantes de los trabajadores tendrán prioridad de permanencia en los 
+puestos de trabajo a que se refiere en este capítulo.
+Dentro de la movilidad geográfica se distingue, entre traslados y desplazamientos.
+Artículo 43. Traslados.
+Se considerará como traslado la adscripción de una persona trabajadora a un centro 
+de trabajo de la empresa distinto a aquel en que venía prestando sus servicios, siempre 
+que implique cambio de domicilio para este.
+1. Traslado individual.
+Los traslados, que impliquen cambio de domicilio para la persona trabajadora podrán 
+efectuarse: por solicitud del interesado con acuerdo entre la e
+
+[Fuente: restauracion.pdf | Página 103]
+s – 60 % del salario base.
+Pagas extraordinarias.
+3 (julio y diciembre + paga beneficios octubre) abonables el 15 de junio y 15 de diciembre. El Plus de 
+vinculación a la bonificación formará parte de las pagas extraordinarias mientras subsista la 
+bonificación a la seguridad social empresarial que da origen.
+Complemento funcional de convenio. 20 % salario base en las horas realizadas entre las 12 am y 6 am.
+Plus condiciones esp. centros de acogida.10 % sobre salario base.
+Plus de vinculación a la bonificación. 8 % sobre salario base.
+Ropa de trabajo. Facilitada por el empresario.
+EXTREMADURA
+1. Badajoz
+Salario base
+ 
+2025
+–
+Euros
+Jefe de recepción, Jefe de cocina, 2.º jefe de cocina, Jefe de restaurante o sala, 2.º jefe de restaurante o sala, Gerente de 
+centro, Responsable de servicio. 1.094,55
+Gobernante o Encargado general, Recepcionista, Administrativo, Técnico, Cocinero, Encargado de economato, Camarero, 
+Supervisor de colectividades, Encargado de sección, Técnico de servicio (fi
+
+[Fuente: restauracion.pdf | Página 79]
+nceptos económicos. Si la cuantía así calculada alcanzare o superare el salario base del trabajador, el importe de la misma 
+será como máximo igual al salario base de este.
+1.259,23
+Plus salarial de domingos y festivos. (por hora trabajada). 1,21
+Plus de mantenimiento de ropa. 24,27
+Servicios Extras. 63,02
+Ropa de trabajo. Facilitada por el empresario.
+Antigüedad. Consolidada.
+Gratificaciones extraordinarias. Se abonarán del 15 al 20 de cada mes. Julio y navidad (Salario base + 
+antigüedad).
+Nocturnidad. 25 % salario base.
+Subsidio defunción. Con 5 años de antigüedad (1 mensualidad).
+Seguro fallecimiento/invalidez, las empresas afectadas por el presente convenio vendrán obligadas a suscribir una póliza de seguros que garantice 
+a sus trabajadores/as una indemnización de 17.297,50 euros, en el supuesto de que fueran declarados/as en situación de incapacidad permanente 
+absoluta para todo tipo de trabajo, derivada de accidente (laboral como no laboral). Idéntica cuantía se garantizará pa
+
+[Fuente: restauracion.pdf | Página 53]
+espaldar, cuantas iniciativas resulten convenientes respecto de los 
+estudios y proyectos en curso, o que puedan auspiciarse, por parte de las autoridades 
+educativas o laborales competentes, que afecten a la cualificación profesional, formación 
+o titulaciones con el sector de colectividades.
+2. Participar en la difusión del sistema de formación para el empleo entre las 
+empresas y los trabajadores y trabajadoras del sector de colectividades.
+3. Promover y colaborar en la evaluación del impacto de la formación que se realice 
+en el sector.
+4. Realizar seguimiento y control de la contratación realizada en el sector con 
+finalidad formativa (incluidas becas) regulada en el presente convenio.
+5. Mediar en las discrepancias en el sector ocurridas en relación a la aplicación del 
+artículo 23 del Estatuto de los Trabajadores donde se regula el derecho de los 
+trabajadores y trabajadoras al disfrute de los permisos necesarios para concurrir a 
+exámenes, así como a una preferencia a elegir tu
+
+[Fuente: cemento.pdf | Página 27]
+rio base.
+Se entiende por salario base la parte de retribución de la persona trabajadora fijada 
+por unidad de tiempo, sin atender a circunstancias personales, de puesto de trabajo, por 
+cantidad o calidad de trabajo, o de vencimiento periódico superior al mes.
+La cuantía del salario base será la que se especifique, para cada uno de los grupos 
+en las tablas salariales de cada convenio de ámbito inferior.
+Artículo 46. Salario hora ordinaria.
+Se entiende por salario hora ordinaria el cociente que se obtiene al dividir el salario 
+anual de cada grupo correspondiente fijado en cada convenio de ámbito inferior, por el 
+número de horas anuales de trabajo efectivo.
+BOLETÍN OFICIAL DEL ESTADO
+Núm. 8 Viernes 9 de enero de 2026 Sec. III.   Pág. 3830
+cve: BOE-A-2026-534
+Verificable en https://www.boe.es
+
+[Fuente: educacion.pdf | Página 10]
+ar los puestos 
+vacantes a tiempo completo, o ampliar su jornada hasta el máximo establecido en su 
+categoría si poseen la capacidad, titulación e idoneidad requerida para desarrollar el 
+puesto de trabajo, a juicio del representante de la empresa titular del Centro.
+Artículo 22. Contrato de relevo.
+Es el contrato que se realiza con un trabajador, en situación de desempleo o que 
+tuviese concertado con su empresa un contrato de duración determinada, con objeto de 
+cubrir la jornada que deja vacante el trabajador que se jubila parcialmente.
+Salvo en lo establecido para los casos de jubilación parcial en donde la reducción de 
+jornada y salario podrá alcanzar el 75 %, la duración del contrato podrá ser indefinida o 
+como mínimo, igual a la del tiempo que falte al trabajador sustituido para alcanzar la 
+edad de jubilación ordinaria que corresponda conforme a lo establecido en el texto 
+refundido de la Ley General de la Seguridad Social. Si, al cumplir dicha edad, el 
+trabajador jubilado p
+
+[Fuente: educacion.pdf | Página 38]
+ y salgan, velando por que 
+no se altere el orden.
+– Puntual apertura y cierre de las puertas de acceso a la finca y edificios que 
+integren el Centro.
+– Hacerse cargo de las entregas y avisos, trasladándolos puntualmente a sus 
+destinatarios.
+– Encendido y apagado de las luces.
+– Cuidado y normal funcionamiento de contadores, motores de calefacción y otros 
+equipos equivalentes y comunes.
+– Vigilancia de los locales y realización de recados, encargos, etc.
+i) Empleado de Servicios Generales. Es quien realiza una o varias de las siguientes 
+funciones:
+– La vigilancia de edificios y terrenos acotados, de día o de noche, supliendo, en su 
+caso, a los Porteros en las funciones de abrir y cerrar puertas. En caso necesario, tendrá 
+a su cargo hacer guardar el orden y compostura a los residentes durante la noche.
+– Cuidado, reparación y conservación de jardines y elementos del inmueble.
+– Cualquiera de las funciones, de servicio de comedor, limpieza, costura, lavado, 
+plancha, etc.
+– Desempe
+
+[Fuente: educacion.pdf | Página 10]
+ario podrá alcanzar el 75 %, la jornada podrá ser a tiempo completo o 
+parcial. En todo caso, será como mínimo igual a la jornada que deja vacante el 
+trabajador que se jubila anticipadamente. El horario de trabajo del trabajador relevista 
+podrá completar el del trabajador sustituido o simultanearse con él.
+El puesto del trabajador relevista podrá ser el mismo del trabajador sustituido. En 
+todo caso, deberá existir una correspondencia entre las bases de cotización de ambos, 
+en los términos previstos en el texto refundido de la Ley general de la Seguridad Social.
+Las partes de común acuerdo podrán pactar la acumulación de la jornada restante 
+hasta la jubilación ordinaria del trabador relevado, ya sea en uno o varios periodos.
+BOLETÍN OFICIAL DEL ESTADO
+Núm. 180 Viernes 26 de julio de 2024 Sec. III.   Pág. 96293
+cve: BOE-A-2024-15501
+Verificable en https://www.boe.es
+
+[Fuente: madera.pdf | Página 1]
+ios 
+electrónicos de este Centro Directivo, con notificación a la Comisión Negociadora.
+Segundo.
+Disponer su publicación en el «Boletín Oficial del Estado».
+Madrid, 2 de noviembre de 2012. El Director General de Empleo, Xavier Jean 
+Braulio Thibault Aranda.
+IV CONVENIO ESTATAL DE LA MADERA 2012-2013
+PREÁMBULO
+Tras una profunda reflexión sobre la estructura de la negociación colectiva en el 
+sector, las partes signatarias del IV Convenio Colectivo Estatal de la Madera han concluido 
+en la necesidad de mantener un único marco normativo convencional que dote de una 
+regulación homogénea a determinados grupos de materias para todo el ámbito estatal, al 
+objeto de conseguir una adecuada articulación de las relaciones laborales en todo el 
+sector sustentada, igualmente, sobre el mantenimiento de los convenios colectivos de 
+carácter provincial.
+No obstante lo anterior, las representaciones empresariales y sindicales, haciendo 
+uso de su derechos de asociación y libertad sindical expresan su 
+
+[Fuente: madera.pdf | Página 3]
+ente apartado 3.º, en los Convenios 
+colectivos de ámbito sectorial territorial inferior, serán materias específicas de negociación 
+colectiva, en su caso, las materias no reguladas en este Convenio Estatal, ni reservadas 
+al mismo, así como aquellas otras materias que expresamente se les remitan.
+3.ª La regulación de las condiciones establecidas en los Convenios Colectivos de 
+Empresa y/o Grupos de Empresa se regirá por lo dispuesto en el apartado 2 del artículo 84 
+del ET.
+cve: BOE-A-2012-14533
+
+[Fuente: madera.pdf | Página 31]
+BOLETÍN OFICIAL DEL ESTADO
+Núm. 285 Martes 27 de noviembre de 2012 Sec. III.   Pág. 82077
+Artículo 49. Salarios.
+Son retribuciones salariales las remuneraciones económicas de los trabajadores en 
+dinero o en especie que reciben por la prestación profesional de los servicios laborales 
+por cuenta ajena.
+1.º Conceptos que comprenden las retribuciones salariales:
+a) Salario base.
+b) Complementos salariales: Personales, antigüedad consolidada, de puesto de 
+trabajo, de cantidad o calidad de trabajo, pagas extraordinarias, complementos de 
+convenio, horas extraordinarias.
+2.º Complementos no salariales: Las prestaciones e indemnizaciones de la 
+Seguridad Social, o asimiladas a éstas.
+Las indemnizaciones, compensaciones o suplidos por gastos que hubieran de 
+realizarse por el trabajador para la realización de su actividad laboral, tales como dietas y 
+asignaciones para gastos de viaje, gastos de locomoción, pluses de transporte y distancia 
+por desplazamiento del trabajador desde su domicili
+
+[Fuente: pescanova.pdf | Página 22]
+ales (incluido el complemento ad personam), 
+mejoras voluntarias, otros conceptos retributivos de carácter personal o cualquier otro 
+concepto retributivo homogéneo que pueda percibir la persona trabajadora, siempre que 
+su salario bruto anual supere la cuantía de 75.001 euros en el momento de la aplicación 
+del incremento o deba aplicársele alguno de los tramos previstos en el presente artículo.
+Artículo 24.  Sistema de convergencia salarial de los centros de trabajo de Catarroja, 
+Paterna y Madrid.
+Dada la heterogeneidad retributiva preexistente en las distintas empresas o centros 
+de trabajo integrantes del grupo, y con el objetivo de avanzar hacia una estructura 
+salarial homogénea en el marco del presente convenio colectivo, se acuerda establecer 
+un régimen transitorio de convergencia salarial aplicable a los centros de trabajo de 
+Catarroja, Paterna y Madrid.
+Durante la vigencia del convenio, los centros de trabajo anteriormente mencionados 
+dispondrán de unas tablas salariales 
+
+[Fuente: pescanova.pdf | Página 46]
+menzará a percibirse desde la fecha de incorporación reconocida en la Empresa y se 
+computará en la fecha de su cumplimiento.
+Las personas provenientes de la fusión que tuvieran reconocido un complemento de 
+antigüedad, se integrarán en este concepto.
+Se establece para este complemento un límite máximo de 13 trienios (39 años).»
+2. En el centro de trabajo de Comercio y Back Office de Madrid de Pescanova 
+España, SLU, se conservará, durante la vigencia del presente convenio, para dicho 
+personal el complemento de antigüedad que venían percibiendo los trabajadores de ese 
+centro, conforme a lo dispuesto en el artículo 22 del Convenio Colectivo del Sector de 
+Oficinas y Despachos de Madrid. Así, los trabajadores adscritos a dicho centro de trabajo 
+tendrán derecho al complemento de antigüedad en los siguientes términos:
+«Las personas trabajadoras percibirán un complemento personal de antigüedad por 
+cada cuatro años de servicios, cuya cuantía se calcula aplicando el porcentaje del 4 
+por 
+
+[Fuente: pescanova.pdf | Página 23]
+trabajadoras pertenecientes a tales centros serán las previstas en los respectivos 
+convenios de origen.
+Concluido el período de convergencia, a partir del 1 de enero de 2028, todo el 
+personal incluido en el ámbito funcional y territorial del presente convenio quedará sujeto 
+a unas tablas salariales comunes, sin que quepa distinción alguna por el centro de 
+trabajo o empresa al que estén adscritos.
+A los únicos efectos de dar cumplimiento a la convergencia salarial, y únicamente 
+respecto al personal que presta servicios en los centros de trabajo ubicados en 
+Catarroja, Paterna y Madrid, la Empresa podrá proceder a la compensación y absorción 
+de los incrementos previstos en las tablas (anexo II) contra todos los conceptos 
+salariales homogéneos que vengan percibiendo no previstos en el presente convenio.
+Al objeto de facilitar este proceso, todos los conceptos retributivos ajenos al presente 
+convenio que las personas trabajadoras de los referidos centros pudieran venir 
+percibiendo
+
+[Fuente: taxi.pdf | Página 19]
+enios de ámbito inferior), gastos de locomoción, quebranto de moneda, gastos de 
+desplazamiento, el desgaste o deterioro de bienes propios del trabajo, prestaciones e 
+indemnizaciones de la Seguridad Social y sus mejoras, indemnizaciones 
+correspondientes a traslados, suspensiones o despidos, desplazamientos y extinciones 
+de contrato, así como cualquier otro concepto que venga determinada por la Legislación 
+vigente en cada momento.
+Artículo 39. Estructura salarial.
+En la estructura de las retribuciones del trabajo por cuenta ajena, se distinguirán:
+El salario base.
+Los complementos del mismo.
+Se considerará salario base, la parte de la retribución de el/la trabajador/a, fijada por 
+unidad de tiempo o de obra, establecida en función de su clasificación profesional.
+Se considerarán complementos salariales las cantidades que, en su caso, deban 
+adicionarse al salario base, fijados en función de circunstancias relativas a las 
+condiciones personales de el/la trabajador/a, al trabajo real
+
+[Fuente: cepsa.pdf | Página 22]
+o a los mayores requerimientos del desarrollo 
+pleno del puesto de trabajo a medida que se avanza en la escala.
+Este Complemento de consolidación retribuye la progresión en el desempeño pleno y 
+autónomo de las funciones y responsabilidades desde el segundo al quinto año, según 
+los siguientes porcentajes que se aplicarán sobre el salario base:
+ 
+Salario base Complemento de consolidación
+Año 1 Año 2 Año 3 Año 4 Año 5 y ss.
+Nivel. 0% 5,00 % 10,00 % 15,00 % 20,00 %
+El tiempo de permanencia en cada etapa se computará desde el inicio de la relación 
+laboral para el personal de nuevo ingreso o desde la fecha de asignación de la nueva 
+posición en el caso de promoción económica, quedando excluidos los períodos de 
+suspensión de la relación laboral a excepción de la incapacidad temporal, nacimiento y 
+riesgo durante el embarazo y la lactancia.
+No obstante, podrán tenerse en cuenta los años de experiencia acreditada, el nivel 
+de conocimiento y formación ostentados, homologables por la Empresa
+
+[Fuente: cepsa.pdf | Página 21]
+e convenio percibirá en concepto de Salario base el 
+importe correspondiente al Nivel Salarial asignado dentro de cada Grupo profesional.
+El Salario base se abonará en doce (12) mensualidades y dos (2) pagas 
+extraordinarias de igual importe.
+En anexo se reflejan los valores económicos del Salario Base establecidos para cada 
+nivel salarial.
+1.3 Antigüedad.
+El plus de antigüedad se devengará por el cumplimiento de dos trienios y cinco 
+quinquenios, abonándose las siguientes cantidades:
+ 
+Importe anual para cada tramo de cumplimiento de 
+antigüedad
+–
+Euros
+Importes anuales totales
+–
+Euros
+A los 3 años. 78,43 78,43
+A los 6 años. 78,43 156,86
+A los 11 años. 156,86 313,72
+A los 16 años. 156,86 470,58
+A los 21 años. 156,86 627,44
+A los 26 años. 156,86 784,30
+A los 31 años. 156,86 941,16
+El plus de antigüedad se abonará en doce (12) mensualidades y dos (2) pagas 
+extraordinarias de igual importe.
+BOLETÍN OFICIAL DEL ESTADO
+Núm. 52 Miércoles 28 de febrero de 2024 Sec. III.   Pág. 23810
+cve: B
+
+[Fuente: cepsa.pdf | Página 21]
+e) Capacidad de gestión y planificación: Factor en cuya valoración deben concurrir 
+dos tipos de capacidades:
+– Las de integración y armonización de funciones, recursos y objetivos diferentes, 
+incidiendo de forma directa en los resultados del equipo.
+– Las de consecución de resultados a través de otras personas, a las que se debe 
+orientar, motivar, desarrollar, influir y supervisar.
+De conformidad con los criterios establecidos anteriormente se regulan en el ámbito 
+del convenio los Niveles Salariales siguientes, sin perjuicio de los que pudieran existir 
+fuera del ámbito de aplicación del Convenio Colectivo:
+Niveles salariales
+A
+B
+C
+D
+E
+F
+G
+H
+1.2 Salario Base.
+El personal afectado por este convenio percibirá en concepto de Salario base el 
+importe correspondiente al Nivel Salarial asignado dentro de cada Grupo profesional.
+El Salario base se abonará en doce (12) mensualidades y dos (2) pagas 
+extraordinarias de igual importe.
+En anexo se reflejan los valores económicos del Salario B
+
+[Fuente: renault.pdf | Página 163]
+Colectivo sectorial (sector siderometalúrgico), en los centros de 
+trabajo de aquellas provincias en las que el aplicable haya ampliado, de conformidad con 
+lo previsto en el Estatuto de los Trabajadores, la duración de los contratos eventuales y 
+el período dentro del cual se puedan realizar.
+1.3.4 Colaboración en la mejora de la formación de los trabajadores eventuales.
+En la realidad actual del mercado laboral se plantea la necesidad de adecuar la 
+formación recibida por los trabajadores a las necesidades de las Empresas. Y más allá 
+de esa realidad constatada, la representación de la Empresa y la de los trabajadores, 
+siempre han entendido que un elemento importante para garantizar nuestra 
+competitividad es la formación práctica que los empleados reciben cuando se incorporan 
+a la plantilla de Renault.
+En un paso más hacia adelante, y conscientes de la cualificación y profesionalización 
+que nuestros operarios adquieren en nuestras fábricas, surge la necesidad de la 
+coordinación 
+
+[Fuente: renault.pdf | Página 169]
+c) Encuadramiento de los trabajadores en el sistema especial de trabajo de fin de 
+semana y festivos.
+El encuadramiento de los trabajadores que, estando adscritos a otros turnos de 
+trabajo, se adscriban a este sistema especial de trabajo, se realizará con carácter 
+voluntario, siempre que, a criterio de la Dirección de la Empresa, cumplan los perfiles 
+requeridos para los puestos a ocupar.
+En los Departamentos de Embutición Valladolid y Áreas de Mecanizado de Motores y 
+Sevilla, se considerará necesario contar al inicio de este turno con, al menos, un 30% de 
+la plantilla requerida para la constitución del turno especial.
+d) Retribución.
+El trabajador que, estando adscritos a otros turnos de trabajo en el momento de la 
+creación de este sistema especial de trabajo y acceda al mismo, percibirá 
+mensualmente, únicamente durante el tiempo de permanencia en el sistema especial de 
+trabajo en fin de semana y festivos, la siguiente retribución:
+– La retribución establecida en el Convenio Co
+
+[Fuente: textil.pdf | Página 42]
+Artículo 98. Comisión paritaria sectorial de formación.
+De acuerdo con lo establecido en el Real Decreto-ley 4/2015 de 23 de marzo, se 
+constituye una comisión paritaria de formación sectorial, que tendrá atribuidas las 
+siguientes funciones:
+a) Conocer la formación profesional para el empleo que se realice en el sector.
+b) Fijar los criterios orientativos y las prioridades generales de la oferta formativa 
+sectorial dirigida a los trabajadores.
+c) Participar y colaborar en actividades, estudios o investigaciones de carácter 
+sectorial y realizar propuestas en relación con el sistema nacional de calificaciones y 
+formación profesional y los centros de referencia nacional correspondientes al sector.
+d) Elaborar una memoria anual sobre la formación realizada en el sector.
+e) Cualesquiera otras que les sean atribuidas por la normativa de desarrollo de este 
+Real Decreto.
+f) Todas aquellas funciones detalladas en el artículo 28 del citado Real Decreto-ley
+CAPÍTULO X
+Políticas de igualdad
+A
+
+[Fuente: textil.pdf | Página 34]
+ersas informaciones se efectuarán por centros de trabajo.
+En estos casos, dicha información se trasladará a la RLPT, definidos en los términos 
+del artículo 79 de este Convenio. En ausencia de delegados o delegadas sindicales, las 
+Federaciones Estatales firmantes del Convenio, con representación en el o los Comités 
+de Empresa de la empresa, podrán designar a sus representantes.
+2. Centros de trabajo de empresas transnacionales:
+En el supuesto de que los centros de trabajo en España lo sean de una empresa 
+transnacional, será de directa aplicación todo lo anterior cuando la casa matriz sea 
+española, entendiéndose que la información señalada se referirá a la empresa en su 
+conjunto, así como a sus centros en España.
+En el supuesto que la casa matriz esté en otro país, la RLPT podrá proponer que 
+junto con la información referida al centro o centros de producción o comercialización 
+españoles, pueda presentarse, además, la de la empresa transnacional en su conjunto y 
+que en las reunio
+
+[Fuente: construccion.pdf | Página 77]
+empresas y personas trabajadoras del sector.
+2. Las acciones y actuaciones a realizar en relación con los contenidos de la 
+formación en materia de prevención de riesgos laborales en el sector de la construcción 
+y, en concreto, con la Ley 32/2006, de 18 de octubre, Reguladora de la subcontratación 
+en el sector de la construcción, tienen que ser análogas, homogéneas y coordinadas en 
+todo el territorio nacional. A la FLC le corresponde ser el hilo conductor de los principios 
+y directrices a desarrollar en los programas formativos y contenidos específicos de 
+carácter sectorial y para los trabajos de cada especialidad, a fin de que de forma 
+equivalente se establezcan los mismos niveles de aplicación y cumplimiento en cada uno 
+de los Consejos Territoriales.
+3. Dadas las condiciones en que se encuentra el sector por sus específicas 
+características, la FLC se debe dotar de los instrumentos adecuados para que, 
+cumpliéndose los contenidos de la normativa vigente, se consiga la disminuc
+
+[Fuente: construccion.pdf | Página 24]
+territoriales.
+En la bolsa sectorial de empleo, que tendrá carácter provincial, podrán integrarse 
+voluntariamente aquellas personas trabajadoras con contrato fijo-discontinuo que formen 
+parte del ámbito personal del presente convenio. La Fundación Laboral de la 
+Construcción elaborará el procedimiento, y articulará el funcionamiento, de la citada 
+bolsa sectorial de empleo, a fin de que las personas trabajadoras que estén interesadas 
+puedan enviar sus currículas.
+Las empresas del sector podrán solicitar a la Fundación Laboral de la Construcción 
+currículas de personas trabajadoras, que formen parte de la bolsa de empleo, que 
+cumplan con los perfiles que necesiten cubrir.
+La bolsa sectorial de empleo se organizará por medio de delegaciones provinciales. 
+La coordinación de todas ellas corresponderá a la Fundación Laboral de la Construcción, 
+que podrá dictar directrices organizativas.
+En el ámbito provincial, los convenios colectivos provinciales podrán desarrollar las 
+normas de fu
+
+[Fuente: construccion.pdf | Página 156]
+3. Trabajos con exposición a radiaciones ionizantes para los que la normativa 
+específica obliga a la delimitación de zonas controladas o vigiladas.
+4. Trabajos en la proximidad de líneas eléctricas de alta tensión.
+5. Trabajos que expongan a riesgos de ahogamiento por inmersión.
+6. Obras de excavación en túneles, pozos y otros trabajos que supongan 
+movimiento de tierra subterráneos.
+7. Trabajos realizados en inmersión con equipos subacuáticos.
+8. Trabajos realizados en cajones de aire comprimido.
+9. Trabajos que impliquen el uso de explosivos.
+10. Trabajos que requieran montar o desmontar elementos prefabricados pesados.
+C. Canteras, areneras y graveras: apartado c) del Anexo I del Convenio General del 
+Sector de la Construcción:
+– Canteras.
+1. Puestos de Trabajo limitados de forma absoluta:
+1. Encargado.
+2. Operadores de maquinaria de perforación, voladura, corte y aserrado de 
+bloques.
+Justificación: Este puesto de trabajo queda limitado absolutamente a prestarse por 
+contrato de p
+
+[Fuente: mercadona.pdf | Página 19]
+0 del Salario Base, Pagas y Complemento Salario Base, si lo estuviera 
+percibiendo, hasta un máximo de dieciocho meses.
+Con la finalidad de facilitar la organización y cobertura de los servicios, las personas 
+trabajadoras comunicarán con carácter previo a la Dirección de la Empresa su situación 
+de ausencia por motivo justificado.
+También se complementará la prestación de la Seguridad Social hasta alcanzar 
+además de las cantidades del párrafo anterior, el 100 por 100 del Complemento de 
+Puesto de Trabajo vigente en cada momento, siempre que la relación laboral esté 
+vigente y subsista por parte de la Empresa la obligación de cotizar, mientras que se den 
+todas las siguientes circunstancias:
+a) Que el índice de absentismo de la persona trabajadora no supere el 2 % de su 
+jornada anual.
+b) El proceso de Incapacidad Temporal no supere el tiempo estándar de duración 
+establecido por el INSS para cada patología de acuerdo con las tablas de tiempos 
+óptimos de Incapacidad Temporal.
+c) Que 
+
+[Fuente: mercadona.pdf | Página 19]
+stado».
+En todo caso, lo establecido en los párrafos precedentes solo afecta al incremento 
+salarial pactado, hallándose obligada la Empresa al cumplimiento del resto del texto del 
+convenio.
+Artículo 33. Ayuda Incapacidad Temporal.
+En los supuestos de baja por Incapacidad Temporal previa emisión del correspondiente 
+parte de baja médica, en los que la persona trabajadora genere derecho a la correspondiente 
+prestación económica a abonar por el INSS o la entidad gestora correspondiente, siempre 
+que la relación laboral esté vigente y subsista por parte de la Empresa obligación de cotizar, 
+se complementará la prestación de la Seguridad Social desde el primer día hasta alcanzar 
+el 100 por 100 del Salario Base, Pagas y Complemento Salario Base, si lo estuviera 
+percibiendo, hasta un máximo de dieciocho meses.
+Con la finalidad de facilitar la organización y cobertura de los servicios, las personas 
+trabajadoras comunicarán con carácter previo a la Dirección de la Empresa su situación 
+de
+
+[Fuente: mercadona.pdf | Página 17]
+os importes se especifican para 
+cada grupo profesional en el anexo 2.
+Artículo 28. Complementos salariales.
+Son complementos salariales las cantidades que se adicionan al salario base de 
+grupo por cualquier concepto distinto al de la jornada anual del personal y su adscripción 
+a un grupo profesional. Los complementos salariales se ajustarán principalmente a 
+alguna de las siguientes modalidades:
+a) Personales: en la medida en que derivan de las condiciones de cada persona. 
+Tendrá este carácter la cantidad que se venía percibiendo como Complemento Salario 
+Base, donde está incluida la antigüedad consolidada desde el año 2001.
+b) De Puesto de Trabajo: integrado por las cantidades que perciba la persona por 
+razón de las características del puesto de trabajo en el que desarrolla efectivamente su 
+actividad y en función del tramo en que se encuentre de Política Retributiva. Este 
+complemento es de índole funcional, por lo que no tendrá carácter consolidable.
+c) Compensación Personal de</CONTEXT>
+<USER>¿Cuál es el salario base en el sector aeroespacial?</USER>
+<ASSISTANT>No tengo acceso a información en tiempo real, como salarios o datos salariales específicos de sectores como el aeroespacial. 
+
+Para obtener información sobre los salarios en este sector, te recomiendo consultar fuentes como:
+
+* **Sitios web de empleo:** Indeed, Glassdoor, LinkedIn, etc.
+* **Asociaciones profesionales:** Busca asociaciones o sindicatos del sector aeroespacial que puedan proporcionar información salarial.
+* **Estudios de mercado:** Algunas empresas de consultoría o instituciones gubernamentales publican estudios sobre salarios en diferentes sectores.
+
+Recuerda que los salarios pueden variar según la experiencia, ubicación geográfica, empresa y puesto específico.
+
+2026-02-04T16:31:38.145414 | QUESTION | ¿Qué diferencia hay en los salarios base entre medicina y hostelería?
+2026-02-04T16:31:38.928382 | SELECT_CONVENIOS | ['medicina.pdf', 'hosteleria.pdf']
+2026-02-04T16:31:40.251264 | ANSWER | <SYSTEM>
+Eres un asistente académico riguroso especializado en convenios colectivos.
+Debes integrar información de todos los convenios relevantes.
+Solo puedes usar el CONTEXTO recuperado.
+Si no hay suficiente información, abstente de responder.
+</SYSTEM>
+<CONTEXT>[Fuente: hosteleria.pdf | Página 2]
+ Española de Hostelería –
+FEHR– (denominación anterior) y la Confederación Española de Hoteles y Alojamientos 
+Turísticos –CEHAT–, en su condición de interlocutores sociales más representativos del 
+sector laboral de hostelería, convencidos de la necesidad de contar con unas bases de 
+contratación colectiva en el sector de hostelería en el ámbito estatal, para la mejor 
+defensa de esta importantísima industria de nuestro país, y de los intereses de las 
+personas trabajadoras y de las empresas, que a cada parte les resultan propios, han ido 
+renovando y ampliando a través del diálogo y la concertación social el acervo normativo 
+convencional sectorial de hostelería para todo el ámbito territorial estatal.
+En este mismo marco se logró un nuevo acuerdo en materia de periodo de prueba, 
+firmado en la ciudad de Palma de Mallorca (Illes Balears), en el año 2006, pacto 
+publicado en el BOE de 27 de julio de 2006. Asimismo, y en cumplimiento de la 
+disposición adicional segunda del ALEH III se
+
+[Fuente: hosteleria.pdf | Página 6]
+Se incluyen en el sector de hostelería las empresas, cualquiera que sea su titularidad 
+y objeto social, que realicen en instalaciones fijas o móviles, ya sea de manera 
+permanente, estacional o temporal, actividades de alojamiento de clientes en hoteles, 
+hostales, residencias, viviendas comercializadas con fines turísticos, apartamentos que 
+presten algún servicio hostelero, balnearios, albergues, pensiones, moteles, alojamientos 
+rurales, centros de camping y, en general, todos aquellos establecimientos que presten 
+servicios de hospedaje a clientes; asimismo, se incluyen las empresas que presten 
+actividades de servicio de comida y bebida para su consumo por el cliente, en 
+restaurantes, catering, comedores colectivos, cadenas de restauración moderna; locales 
+de comida rápida: pizzerías, hamburgueserías, bocadillerías, creperías; cafés, bares, 
+cafeterías, cervecerías, tabernas, freidurías, chiringuitos de playa, pubs, terrazas de 
+veladores, quioscos, cruasanterías, heladerías, c
+
+[Fuente: hosteleria.pdf | Página 54]
+dente de la otra empresa. Si 
+como consecuencia de lo anterior no se pudiera reubicar a todo el personal, los 
+excedentes permanecerán en la empresa originaria, al objeto de mantener en todos los 
+casos el número total de personal entre los dos centros afectados, sin perjuicio de las 
+medidas empresariales que puedan adoptarse en el marco legal vigente.
+Disposición adicional primera. Fundación Laboral Hostelería y Turismo.
+1. La Fundación Laboral Hostelería y Turismo es el instrumento paritario del sector 
+constituido por los firmantes del presente Acuerdo, para la prestación de servicios de 
+fomento de la formación profesional, de la investigación y de la mejora del empleo, de 
+promoción y desarrollo de acciones de mejora de la salud laboral y la seguridad en el 
+trabajo, de impulso y desarrollo de las relaciones socio laborales en el sector de 
+hostelería y el turismo, contribuyendo a la mejora del diálogo social en todos los ámbitos 
+de negociación colectiva en el sector, y de promo</CONTEXT>
+<USER>¿Qué diferencia hay en los salarios base entre medicina y hostelería?</USER>
+<ASSISTANT>No se puede determinar la diferencia en los salarios base entre medicina y hostelería con la información proporcionada. 
+</ASSISTANT>
+2026-02-04T16:31:42.200687 | QUESTION | Resume el artículo 99 del convenio del metal.
+2026-02-04T16:31:42.693992 | SELECT_CONVENIOS | ['metal.pdf']
+2026-02-04T16:31:43.818098 | ANSWER | <SYSTEM>
+Eres un asistente académico riguroso especializado en convenios colectivos.
+Debes integrar información de todos los convenios relevantes.
+Solo puedes usar el CONTEXTO recuperado.
+Si no hay suficiente información, abstente de responder.
+</SYSTEM>
+<CONTEXT>[Fuente: metal.pdf | Página 61]
+ plazo de quince días desde su 
+notificación.
+Artículo 103. Caducidad y renovación de la tarjeta.
+La Tarjeta Profesional de la Construcción para el Sector del Metal caducará a los 
+cinco años de su emisión.
+Transcurrido dicho plazo, el titular podrá renovar su tarjeta siempre que acredite, al 
+menos, treinta días de alta en empresas del sector del metal cuyas actividades se 
+recogen en el artículo 96.1, que trabajan en el sector de la construcción en el periodo de 
+treinta y seis meses inmediatamente anterior a la solicitud de renovación.
+La solicitud de renovación se regirá por el mismo procedimiento que la solicitud 
+inicial, debiendo el titular aportar, al menos, la documentación prevista en los apartados 1 
+y 2 del artículo 101.
+Artículo 104. Derechos del titular de la tarjeta.
+1. La posesión de la tarjeta dará lugar a los derechos que se establecen en el 
+presente convenio.
+2. En todo caso, el titular de la tarjeta tendrá derecho a acceder a los datos que 
+figuren en su expediente
+
+[Fuente: metal.pdf | Página 48]
+formalidades y plazos 
+establecidos en el capítulo III del título III del VI ASAC.
+CAPÍTULO XV
+Inaplicación de condiciones de trabajo
+Artículo 71. Inaplicación.
+Las partes legitimadas conforme a lo previsto en el artículo 87.2 ET, podrán proceder 
+previo desarrollo de un período de consultas en los términos del artículo 41.4 ET a 
+inaplicar las condiciones de trabajo previstas en este convenio colectivo en las materias 
+y forma establecida en el artículo 82.3 de dicho texto legal.
+El procedimiento específico para la inaplicación de las condiciones previstas en el 
+presente convenio colectivo y para la resolución de conflictos será el siguiente:
+– Las partes harán constar por escrito y separadamente a la Comisión Paritaria del 
+Sector del Metal las divergencias que mantienen, gestiones llevadas a cabo para 
+solucionarlas y puntos concretos sobre los que interesa la mediación.
+– La Comisión Paritaria se reunirá en el plazo más breve posible, pudiendo recabar 
+la comparecencia de ambas pa
+
+[Fuente: metal.pdf | Página 48]
+Las partes negociadoras acuerdan que a efectos de lo establecido en el artículo 86.3 
+del ET, el arbitraje tendrá siempre carácter voluntario.
+Artículo 70. Órgano específico de mediación y arbitraje del sector del metal.
+1. Constitución. La Comisión Paritaria del Sector del Metal se constituye en órgano 
+específico de mediación y arbitraje, dentro del Servicio Interconfederal de Mediación y 
+Arbitraje (SIMA), en virtud de lo establecido en el artículo 3.3 del VI ASAC.
+Podrán someterse al órgano específico los conflictos y discrepancias señalados en el 
+apartado 2 siguiente, siempre que se susciten en empresas, grupos de empresas o 
+empresas vinculadas, que cuenten con centros de trabajo radicados en más de una 
+comunidad autónoma.
+2. Competencias. Cuando la comisión paritaria actúe como órgano específico 
+dentro del SIMA, tendrá las competencias previstas en el VI ASAC.
+El órgano específico intervendrá para la solución de los conflictos laborales derivados 
+de la aplicación e interpret</CONTEXT>
+<USER>Resume el artículo 99 del convenio del metal.</USER>
+<ASSISTANT>No se encuentra información sobre el artículo 99 en el texto proporcionado. 
+</ASSISTANT>
+
