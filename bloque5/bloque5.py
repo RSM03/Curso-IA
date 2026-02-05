@@ -6,15 +6,18 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 import re
 from datetime import datetime
+import os
 
 # =============================
 # CONFIG
 # =============================
 STORE_DIR = "rag_store"
 DESC_FILE = "bloque4/description.json"
-TOP_K = 3
+TOP_K = 2
 LOG_FILE = "results/agent_log_b5.txt"
-
+os.remove(LOG_FILE)
+with open(LOG_FILE, "w", encoding="utf-8") as f:
+        f.write("LOGS:\n")
 # =============================
 # LOAD DATA
 # =============================
@@ -84,7 +87,7 @@ Responde únicamente con los nombres exactos de los PDFs separados por coma o NO
 # =============================
 # TOOL 2 · RETRIEVE CONTEXT MULTI-PDF
 # =============================
-def retrieve_context(question, pdf_list, k=3):
+def retrieve_context(question, pdf_list, k=2):
     all_chunks = []
     q_emb = embedder.encode([question])
     # buscamos en todo el índice, pero separamos por PDF

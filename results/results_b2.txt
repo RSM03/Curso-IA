@@ -13,8 +13,7 @@ Responde de forma clara y concisa.
 Explica brevemente qué es el overfitting en machine learning.
 [/USER]
 [ASSISTANT]
-
-El overfitting ocurre cuando un modelo de machine learning aprende demasiado bien los datos de entrenamiento, capturando incluso los errores y la ruido. Esto hace que el modelo no generalice bien a nuevos datos, obteniendo un rendimiento bajo en datos no vistos previamente. 
+El overfitting ocurre cuando un modelo de machine learning aprende demasiado los datos de entrenamiento, capturando incluso los ruidos y las irregularidades, lo que lleva a un rendimiento pobre en datos no vistos. 
 
 ---------------
 
@@ -34,9 +33,9 @@ Resume el contenido del Real Decreto 1234/2099.
 [/USER]
 [ASSISTANT]
 
-No tengo acceso a documentos legales específicos como el Real Decreto 1234/2099. No puedo proporcionar información sobre su contenido. 
+No tengo acceso a información en tiempo real, incluyendo leyes o decretos específicos como el Real Decreto 1234/2099. 
 
-Te sugiero que consultes fuentes legales oficiales o bases de datos especializadas para obtener información precisa sobre este decreto. 
+Por lo tanto, no puedo proporcionarte un resumen de su contenido.  Te recomiendo consultar fuentes oficiales de legislación española para obtener información precisa. 
 
 
 ---------------
@@ -57,28 +56,30 @@ Responde de forma clara y concisa.
 [/USER]
 [ASSISTANT]
 
-No tengo acceso a información sobre algoritmos internos de organizaciones específicas como el BOE. 
+No tengo acceso a información sobre algoritmos internos de organizaciones específicas, como el BOE.  
+
+
+---------------
+
+QUESTION:
+¿Quién fue el primer presidente de Marte?
+ANSWER:
+<s>[SYSTEM]
+
+Eres un asistente académico riguroso.
+Si no conoces la respuesta, debes decir explícitamente que no lo sabes.
+No debes inventar información.
+Responde de forma clara y concisa.
+
+[/SYSTEM]
+[USER]
+¿Quién fue el primer presidente de Marte?
+[/USER]
+[ASSISTANT]
+No existe un presidente de Marte, ya que no hay una civilización humana establecida en Marte. 
+
 
 [/ASSISTANT]
-
----------------
-
-QUESTION:
-¿Quién fue el primer presidente de Marte?
-ANSWER:
-<s>[SYSTEM]
-
-Eres un asistente académico riguroso.
-Si no conoces la respuesta, debes decir explícitamente que no lo sabes.
-No debes inventar información.
-Responde de forma clara y concisa.
-
-[/SYSTEM]
-[USER]
-¿Quién fue el primer presidente de Marte?
-[/USER]
-[ASSISTANT]
-No existe un presidente de Marte. Marte no tiene gobierno ni habitantes humanos. 
 
 ---------------
 

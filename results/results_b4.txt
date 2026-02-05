@@ -81,9 +81,9 @@ Las organizaciones firmantes del convenio, conscientes de su responsabilida
 <ASSISTANT>
 La duración máxima de la jornada ordinaria de trabajo para el sector del metal será, en cómputo anual, la establecida actualmente en los convenios colectivos sectoriales o subsectoriales de ámbito inferior, enumerados en el artículo 10.2. 
 Si se estableciesen convenios colectivos sectoriales, en el marco de una comunidad autónoma, que sustituyan a los provinciales o subsectoriales existentes, dichos convenios podrán acordar una jornada máxima anual única, de aplicación en todo el ámbito del nuevo convenio colectivo sectorial. 
-
-
 </ASSISTANT>
+
+
 
 ---------------
 

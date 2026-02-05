@@ -88,3 +88,9 @@ print(torch.cuda.is_available())
 EOF
 
 ```
+
+PARA BORRAR UN MODELO, localizacion:
+
+```bash
+~/.cache/huggingface/hub/
+```

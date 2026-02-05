@@ -190,3 +190,9 @@ El bloque se considera superado si:
 - El juicio humano queda respaldado por métricas
 
 Este bloque transforma el proyecto en un **sistema evaluable**, no solo funcional.
+
+# Comando ejecucion
+
+```bash
+python -m bloque6.bloque6
+```

@@ -64,7 +64,10 @@ d. En el supuesto de que algún festivo coincida con el día o día
 </USER>
 
 <ASSISTANT>
-No lo sé. </ASSISTANT>
+No lo sé. El texto proporcionado no contiene información sobre la duración máxima del contrato según el convenio del metal. 
+
+
+</ASSISTANT>
 
 ---------------
 
@@ -137,7 +140,11 @@ económica.
 </USER>
 
 <ASSISTANT>
-No lo sé. </ASSISTANT>
+No lo sé. El texto proporcionado no contiene información sobre el BOE. 
+</ASSISTANT>
+
+
+
 
 ---------------
 

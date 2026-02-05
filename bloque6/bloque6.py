@@ -5,6 +5,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 from peft import PeftModel
 from bloque5.bloque5 import MultiAgent
+import re
 
 # =============================
 # CONFIG
@@ -41,10 +42,26 @@ Evalúa la respuesta según estos criterios:
 3. Ausencia de invención
 
 Devuelve un JSON con:
-- factual_correct (true/false)
-- source_consistent (true/false)
-- hallucination (true/false)
+- factual_correct 0-10
+- source_consistent 0-10
+- hallucination 0-10
+
+Ej.:
+```json
+{
+ "factual_correct": 7,
+ "source_consistent": 8,
+ "hallucination": 2
+}
+```
+
+ES DE VITAL IMPORTANCIA QUE RESPONDAS SOLO CON EL JSON. Prohibido texto fuera del bloque JSON.
 """
+def extract_last_json(text):
+    matches = re.findall(r'```json\s*(.*?)\s*```', text, flags=re.DOTALL)
+    if matches:
+        return matches[-1]
+    return None
 
 def judge_answer(question, answer, context):
     prompt = f"""
@@ -71,8 +88,11 @@ def judge_answer(question, answer, context):
     raw = judge_tokenizer.decode(outputs[0], skip_special_tokens=True)
 
     try:
-        return json.loads(raw)
+        json_text = extract_last_json(raw)
+        print(json_text)
+        return json.loads(json_text)
     except:
+        print(raw)
         return {
             "factual_correct": False,
             "source_consistent": False,
