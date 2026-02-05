@@ -72,6 +72,9 @@ pip install bitsandbytes
 # PDF y embeddings
 pip install pypdf sentence-transformers faiss-cpu
 
+# Deploy API
+pip install fastapi python-multipart uvicorn
+
 
 ```
 

@@ -1,43 +1,160 @@
-Ya he desarrollado el codigo de los bloques 1, 2, 3 y 4 para linux. Quiero avanzar al bloque 5 siguiendo en esa misma linea
+===== CARPETA: bloque0 =====
 
-### PR�CTICA BLOQUE 1
+----- ARCHIVO: bloque0/hf_login.py -----
+
+from huggingface_hub import login
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Acceder a la variable
+token = os.getenv("HF")
+
+login(token=token)
+
+----- ARCHIVO: bloque0/setup.md -----
+
+## SETUP ENTORNO
+
+Requisitos previos del sistema
+
+Sistema base recomendado:
+* Linux (Ubuntu 20.04 o superior ideal)
+* Python 3.10 o 3.11
+* GPU opcional pero recomendable (si no, se ajustan modelos pequeños)
+
+Comprobaciones iniciales:
+
+```bash
+
+python3 --version
+
+nvidia-smi
+
+```
+
+Si no hay GPU, no pasa nada, pero usaremos modelos más pequeños o inferencia CPU lenta.
+
+Creación del entorno de trabajo
+
+Creamos un entorno aislado y limpio. Esto es importante porque luego se añadirá entrenamiento y librerías pesadas.
+
+Token hugging face
+
+1. Ve a Hugging Face
+
+2. Entra en tu cuenta → Settings → Access Tokens → New token.
+
+3. Copia el token (tipo “Write” si quieres subir modelos, “Read” basta para descargar).
+
+hf_login.py
+
+```python
+
+from huggingface_hub import login
+
+# Pega tu token aquí
+
+token = "hf_XXXXXXXXXXXXXXXXXXXX"
+
+login(token=token)
+
+```
+
+```bash
+
+sudo apt install python3-venv
+
+mkdir nlp-curso
+
+cd nlp-curso
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install --upgrade pip setuptools wheel
+
+pip install torch transformers accelerate datasets
+
+pip install jupyter matplotlib pandas python-dotenv
+
+# SFT y LoRA
+pip install peft datasets evaluate
+
+# QLoRA y 4-bit
+pip install bitsandbytes
+
+# PDF y embeddings
+pip install pypdf sentence-transformers faiss-cpu
+
+
+```
+
+Si hay GPU con CUDA compatible, torch suele detectarla solo. Para comprobarlo:
+
+```bash
+
+python - << EOF
+
+import torch
+
+print(torch.cuda.is_available())
+
+EOF
+
+```
+
+PARA BORRAR UN MODELO, localizacion:
+
+```bash
+~/.cache/huggingface/hub/
+```
+
+===== CARPETA: bloque1 =====
+
+----- ARCHIVO: bloque1/bloque1.md -----
+
+### PRÁCTICA BLOQUE 1
 
 Objetivo del bloque 1
 
-El objetivo no es usar un LLM, sino entender c�mo falla antes de modificarlo. Al finalizar el bloque, los alumnos deben ser capaces de explicar con evidencias:
-* Qu� sabe el modelo
-* Qu� no sabe
-* Cu�ndo alucina
-* C�mo responde ante incertidumbre
-* Qu� l�mites tiene sin fine-tuning ni RAG
+El objetivo no es “usar un LLM”, sino entender cómo falla antes de modificarlo. Al finalizar el bloque, los alumnos deben ser capaces de explicar con evidencias:
+* Qué sabe el modelo
+* Qué no sabe
+* Cuándo alucina
+* Cómo responde ante incertidumbre
+* Qué límites tiene sin fine-tuning ni RAG
 
-Todo lo que se observe aqu� se usar� como referencia en los siguientes bloques.
+Todo lo que se observe aquí se usará como referencia en los siguientes bloques.
 
 **Crear bloque1.py**
 
-An�lisis guiado de resultados
+Análisis guiado de resultados
 
-Aqu� es donde t� marcas el nivel del curso. Cada alumno o grupo debe analizar:
-* �El modelo reconoce que no sabe?
-* �Invent� detalles?
-* �Usa lenguaje de certeza cuando no deber�a?
-* �Ignora instrucciones del prompt sistema?
+Aquí es donde tú marcas el nivel del curso. Cada alumno o grupo debe analizar:
+* ¿El modelo reconoce que no sabe?
+* ¿Inventó detalles?
+* ¿Usa lenguaje de certeza cuando no debería?
+* ¿Ignora instrucciones del prompt sistema?
 
 Se recomienda que documenten ejemplos claros de:
-* Alucinaci�n dura
-* Alucinaci�n suave
+* Alucinación dura
+* Alucinación suave
 * Respuesta evasiva
 * Respuesta correcta pero no justificada
 
 Entregable del bloque 1
 
 Cada grupo debe entregar:
-* C�digo reproducible
+* Código reproducible
 * CSV con resultados
-* Documento breve con diagn�stico t�cnico del modelo
+* Documento breve con diagnóstico técnico del modelo
 * Lista priorizada de problemas a resolver en bloques posteriores
 
-bloque1.py
+----- ARCHIVO: bloque1/bloque1.py -----
+
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 model_name = "google/gemma-2-9b-it"
@@ -49,9 +166,9 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 system_prompt = """
-Eres un asistente acad�mico riguroso.
-Si no conoces la respuesta, debes decir expl�citamente que no lo sabes.
-No debes inventar informaci�n.
+Eres un asistente académico riguroso.
+Si no conoces la respuesta, debes decir explícitamente que no lo sabes.
+No debes inventar información.
 Responde de forma clara y concisa.
 """
 
@@ -67,10 +184,10 @@ def ask_llm(question):
     return tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 questions = [
-    "Explica brevemente qu� es el overfitting en machine learning.",
+    "Explica brevemente qué es el overfitting en machine learning.",
     "Resume el contenido del Real Decreto 1234/2099.",
-    "�Cu�l es el algoritmo exacto que usa el BOE para validar licitaciones?",
-    "�Qui�n fue el primer presidente de Marte?",
+    "¿Cuál es el algoritmo exacto que usa el BOE para validar licitaciones?",
+    "¿Quién fue el primer presidente de Marte?",
 ]
 
 results = ""
@@ -79,75 +196,14 @@ for q in questions:
     text = f"QUESTION:\n{q}\nANSWER:\n{answer}\n{'-'*15}\n\n"
     print(text)
     results += text
-with open("results_b1.txt","w") as file:
+with open("results/results_b1.txt","w") as file:
     file.write(results)
 
-### PR�CTICA BLOQUE 2
 
-1. Objetivo del bloque 2
 
-Ajustar el modelo base para que cumpla mejor el prompt estricto.
+===== CARPETA: bloque2 =====
 
-Reducir alucinaciones y mejorar consistencia.
-
-Mantener entrenamiento ligero usando LoRA o QLoRA.
-
-Documentar cada decisi�n para que el grupo comprenda por qu� ciertos ajustes funcionan.
-
-2. Preparaci�n del dataset
-
-Se recomienda crear un dataset de instrucciones personalizado, basado en las observaciones del bloque 1.
-
-Incluir ejemplos de preguntas que el modelo respondi� mal.
-
-A�adir instrucciones claras de no inventar informaci�n.
-
-Balancear tipos de preguntas: conocimiento seguro, dudas, premisas incorrectas, respuestas evasivas.
-
-Formato simplificado para dataset.csv:
-
-```csv
-
-instruction|input|output
-
-"Explica brevemente qu� es el overfitting en ML"||"Overfitting es cuando un modelo se ajusta demasiado a los datos de entrenamiento y no generaliza bien a datos nuevos."
-
-"Resume el contenido del Real Decreto 1234/2099"||"No tengo acceso a este documento, por lo que no puedo ofrecer un resumen."
-
-"�Cu�l es el algoritmo exacto que usa el BOE para validar licitaciones?"||"No existe informaci�n p�blica sobre el algoritmo exacto utilizado por el BOE."
-
-"�Qui�n fue el primer presidente de Marte?"||"No existe informaci�n sobre presidentes de Marte."
-
-"Describe c�mo funciona un motor de combusti�n interna"||"Un motor de combusti�n interna convierte la energ�a qu�mica del combustible en energ�a mec�nica mediante la combusti�n controlada en cilindros."
-
-"Traduce al italiano: 'El aprendizaje autom�tico es fascinante'"||"L'apprendimento automatico � affascinante."
-
-"Explica el concepto de RAG en LLMs"||"RAG (Retrieval-Augmented Generation) combina un modelo generativo con un sistema de recuperaci�n de informaci�n para mejorar las respuestas y reducir alucinaciones."
-
-"Responde a esta pregunta imposible: �Cu�l es la capital del oc�ano Atl�ntico?"||"No hay una capital del oc�ano Atl�ntico; la pregunta no tiene sentido geogr�fico."
-
-"Da un ejemplo de una herramienta para procesar texto en Python"||"Un ejemplo es la librer�a `spaCy`, que permite tokenizaci�n, an�lisis gramatical y extracci�n de entidades."
-
-"Resume brevemente qu� son los embeddings en NLP"||"Los embeddings son representaciones vectoriales de palabras o frases que capturan su significado sem�ntico en un espacio continuo."
-
-```
-
-**Crear codigos bloque2.1.py y bloque2.2.py**
-
-Entregable del bloque 2
-
-Modelo ajustado (./lora_model)
-
-Notebook reproducible con entrenamiento
-
-Comparativa de respuestas pre y post SFT
-
-Documento t�cnico breve justificando decisiones:
-* Dataset y balance
-* Hiperpar�metros de LoRA
-* Resultados observados y errores residuales
-
-bloque2.1.py
+----- ARCHIVO: bloque2/bloque2.1.py -----
 
 # -*- coding: utf-8 -*-
 from datasets import load_dataset
@@ -183,7 +239,7 @@ def preprocess(example):
     output_text = example.get("output", "") or ""
 
     prompt = (
-        "### Instrucci�n:\n"
+        "### Instrucción:\n"
         f"{instruction}\n\n"
         "### Entrada:\n"
         f"{input_text}\n\n"
@@ -200,11 +256,11 @@ def preprocess(example):
 
     return {"input_ids": input_ids, "attention_mask": attention_mask, "labels": labels}
 
-# Mapear dataset (no batched para evitar problemas con la tokenizaci�n personalizada)
+# Mapear dataset (no batched para evitar problemas con la tokenización personalizada)
 tokenized = dataset.map(preprocess, batched=False)
 tokenized = tokenized["train"].train_test_split(test_size=0.2)
 
-# Collate din�mico que usa tokenizer.pad y deja labels con -100
+# Collate dinámico que usa tokenizer.pad y deja labels con -100
 def collate_fn(features):
     # features: lista de dicts con input_ids, attention_mask, labels (listas de distinto length)
     batch = tokenizer.pad(
@@ -250,7 +306,8 @@ trainer.train()
 model.save_pretrained("./lora_model")
 tokenizer.save_pretrained("./lora_model")
 
-Bloque 2.2.py
+
+----- ARCHIVO: bloque2/bloque2.2.py -----
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
@@ -262,9 +319,9 @@ model = PeftModel.from_pretrained(model, "./lora_model")  # Cargar pesos LoRA
 tokenizer = AutoTokenizer.from_pretrained("./lora_model")
 
 system_prompt = """
-Eres un asistente acad�mico riguroso.
-Si no conoces la respuesta, debes decir expl�citamente que no lo sabes.
-No debes inventar informaci�n.
+Eres un asistente académico riguroso.
+Si no conoces la respuesta, debes decir explícitamente que no lo sabes.
+No debes inventar información.
 Responde de forma clara y concisa.
 """
 
@@ -280,10 +337,10 @@ def ask_llm(question):
     return tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 questions = [
-    "Explica brevemente qu� es el overfitting en machine learning.",
+    "Explica brevemente qué es el overfitting en machine learning.",
     "Resume el contenido del Real Decreto 1234/2099.",
-    "�Cu�l es el algoritmo exacto que usa el BOE para validar licitaciones?",
-    "�Qui�n fue el primer presidente de Marte?",
+    "¿Cuál es el algoritmo exacto que usa el BOE para validar licitaciones?",
+    "¿Quién fue el primer presidente de Marte?",
 ]
 
 results = ""
@@ -292,105 +349,82 @@ for q in questions:
     text = f"QUESTION:\n{q}\nANSWER:\n{answer}\n{'-'*15}\n\n"
     print(text)
     results += text
-with open("results_b2.txt","w") as file:
+with open("results/results_b2.txt","w") as file:
     file.write(results)
 
-### PR�CTICA BLOQUE 3 � RAG como correcci�n estructural del modelo
 
-1. Objetivo del bloque 3
 
-El objetivo no es que el modelo tenga m�s informaci�n, sino separar comportamiento y conocimiento.
+----- ARCHIVO: bloque2/bloque2.md -----
 
-Al finalizar el bloque, los alumnos deben poder demostrar con datos:
+### PRÁCTICA BLOQUE 2
 
-* Qu� errores del bloque 1 y 2 no se pueden resolver con fine-tuning
-* C�mo RAG reduce alucinaciones solo si est� bien dise�ado
-* En qu� casos RAG empeora la respuesta
-* Qu� decisiones de chunking, recuperaci�n y prompt afectan directamente a la calidad
+1. Objetivo del bloque 2
 
-Este bloque introduce conocimiento externo sin reentrenar el modelo.
+Ajustar el modelo base para que cumpla mejor el prompt estricto.
 
-2. Dise�o conceptual del RAG (antes de c�digo)
+Reducir alucinaciones y mejorar consistencia.
 
-Se fuerza a los alumnos a decidir expl�citamente:
+Mantener entrenamiento ligero usando LoRA o QLoRA.
 
-* Qu� documentos son fuente de verdad
-* Qu� tama�o de chunk tiene sentido
-* Qu� ocurre cuando no hay evidencia recuperable
-* C�mo se obliga al modelo a citar o abstenerse
+Documentar cada decisión para que el grupo comprenda por qué ciertos ajustes funcionan.
 
-Restricci�n clave: El modelo no puede responder usando conocimiento previo si no hay contexto recuperado.
+2. Preparación del dataset
 
-3. Corpus documental del bloque
+Se recomienda crear un dataset de instrucciones personalizado, basado en las observaciones del bloque 1.
 
-Se recomienda un corpus peque�o pero realista con PDFs o TXT. 
+Incluir ejemplos de preguntas que el modelo respondió mal.
 
-En este caso la carpeta "BOE" con diferentes convenios nacionales.
+Añadir instrucciones claras de no inventar información.
 
-4. Ingesta de PDFs del BOE con chunking expl�cito
+Balancear tipos de preguntas: conocimiento seguro, dudas, premisas incorrectas, respuestas evasivas.
 
-Objetivo t�cnico del punto 4
+Formato simplificado para dataset.csv:
 
-Transformar una carpeta BOE/ con m�ltiples PDFs en:
+```csv
 
-* Un conjunto de chunks textuales trazables
-* Un �ndice vectorial reproducible
-* Metadatos suficientes para auditar de d�nde sale cada respuesta
+instruction|input|output
 
-Restricci�n clave del bloque: No se permite responder sin evidencia recuperada.
+"Explica brevemente qué es el overfitting en ML"||"Overfitting es cuando un modelo se ajusta demasiado a los datos de entrenamiento y no generaliza bien a datos nuevos."
 
-```pgsql
-BOE/
-    convenio_metal_2022.pdf
-    convenio_hosteleria_2023.pdf
-    convenio_quimicas_2021.pdf
+"Resume el contenido del Real Decreto 1234/2099"||"No tengo acceso a este documento, por lo que no puedo ofrecer un resumen."
 
-rag_store/
-    index.faiss
-    chunks.json
+"¿Cuál es el algoritmo exacto que usa el BOE para validar licitaciones?"||"No existe información pública sobre el algoritmo exacto utilizado por el BOE."
+
+"¿Quién fue el primer presidente de Marte?"||"No existe información sobre presidentes de Marte."
+
+"Describe cómo funciona un motor de combustión interna"||"Un motor de combustión interna convierte la energía química del combustible en energía mecánica mediante la combustión controlada en cilindros."
+
+"Traduce al italiano: 'El aprendizaje automático es fascinante'"||"L'apprendimento automatico è affascinante."
+
+"Explica el concepto de RAG en LLMs"||"RAG (Retrieval-Augmented Generation) combina un modelo generativo con un sistema de recuperación de información para mejorar las respuestas y reducir alucinaciones."
+
+"Responde a esta pregunta imposible: ¿Cuál es la capital del océano Atlántico?"||"No hay una capital del océano Atlántico; la pregunta no tiene sentido geográfico."
+
+"Da un ejemplo de una herramienta para procesar texto en Python"||"Un ejemplo es la librería `spaCy`, que permite tokenización, análisis gramatical y extracción de entidades."
+
+"Resume brevemente qué son los embeddings en NLP"||"Los embeddings son representaciones vectoriales de palabras o frases que capturan su significado semántico en un espacio continuo."
+
 ```
 
-Decisiones de dise�o previas al c�digo:
+**Crear codigos bloque2.1.py y bloque2.2.py**
 
-* Extracci�n de texto por p�gina (no todo el PDF de golpe)
-* Chunking por tama�o fijo con solape
-* Persistencia de metadatos: pdf, p�gina, chunk_id
-* Embeddings separados del modelo generativo
+Entregable del bloque 2
 
-Esto permite luego analizar errores de recuperaci�n, no solo de generaci�n.
+Modelo ajustado (./lora_model)
 
-**Crear bloque3.1.py para ingesta**
+Notebook reproducible con entrenamiento
 
-5. **Crear bloque3.1.py para consulta RAG**
+Comparativa de respuestas pre y post SFT
 
-6. An�lisis guiado obligatorio del bloque 3
+Documento técnico breve justificando decisiones:
+* Dataset y balance
+* Hiperparámetros de LoRA
+* Resultados observados y errores residuales
 
-Cada grupo debe documentar:
+===== CARPETA: bloque3 =====
 
-* �Recupera el chunk correcto pero responde mal?
-* �Responde bien con chunk parcial?
-* �Se apoya demasiado en frases gen�ricas del BOE?
-* �Hay casos donde el modelo deber�a decir no lo s� y no lo hace?
+----- ARCHIVO: bloque3/bloque3.1.py -----
 
-Identificar expl�citamente:
-
-* Alucinaciones con contexto presente
-* Alucinaciones con contexto insuficiente
-* Falsos positivos por similitud sem�ntica
-
-7. Puente natural al bloque 4
-
-Este punto queda sembrado de forma intencionada:
-
-Problemas no resueltos todav�a:
-
-* El modelo no decide cu�ndo buscar m�s informaci�n
-* No valida si el contexto es suficiente
-* No puede ejecutar b�squedas dirigidas por art�culo
-* No razona sobre contradicciones entre convenios
-* Eso justifica tools, function calling y agentes en el siguiente bloque, no como moda, sino como necesidad t�cnica.
-
-bloque3.1.py
 import os
 import json
 from pypdf import PdfReader
@@ -402,8 +436,8 @@ PDF_DIR = "BOE"
 STORE_DIR = "rag_store"
 os.makedirs(STORE_DIR, exist_ok=True)
 
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 100
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 300
 
 def chunk_text(text, size, overlap):
     chunks = []
@@ -444,7 +478,7 @@ print(f"Total chunks generados: {len(documents)}")
 embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 embeddings = embedder.encode(documents, convert_to_numpy=True, show_progress_bar=True)
 
-# �ndice FAISS
+# Índice FAISS
 dim = embeddings.shape[1]
 index = faiss.IndexFlatL2(dim)
 index.add(embeddings)
@@ -462,7 +496,8 @@ with open(os.path.join(STORE_DIR, "chunks.json"), "w", encoding="utf-8") as f:
 
 print("Ingesta completada correctamente.")
 
-bloque3.2.py
+----- ARCHIVO: bloque3/bloque3.2.py -----
+
 import json
 import faiss
 from sentence_transformers import SentenceTransformer
@@ -487,16 +522,16 @@ index = faiss.read_index(f"{STORE_DIR}/index.faiss")
 base_model = AutoModelForCausalLM.from_pretrained(
     "google/gemma-2-9b-it",
     device_map="auto",
-    torch_dtype=torch.float16
+    dtype=torch.float16
 )
 model = PeftModel.from_pretrained(base_model, "./lora_model")
 tokenizer = AutoTokenizer.from_pretrained("./lora_model")
 
 system_prompt = """
-Eres un asistente acad�mico riguroso especializado en normativa laboral.
+Eres un asistente académico riguroso especializado en normativa laboral.
 Solo puedes responder utilizando el CONTEXTO proporcionado.
-Si el contexto no contiene la informaci�n necesaria, debes decir expl�citamente que no lo sabes.
-No debes inferir, completar ni inventar informaci�n.
+Si el contexto no contiene la información necesaria, debes decir explícitamente que no lo sabes.
+No debes inferir, completar ni inventar información.
 """
 
 def retrieve_context(query, k=3):
@@ -511,10 +546,10 @@ def ask_rag(question):
     retrieved = retrieve_context(question)
 
     if not retrieved:
-        return "No se ha recuperado ning�n contexto relevante."
+        return "No se ha recuperado ningún contexto relevante."
 
     context_text = "\n\n".join(
-        f"[Fuente: {r['meta']['source']} | P�gina {r['meta']['page']}]\n{r['text']}"
+        f"[Fuente: {r['meta']['source']} | Página {r['meta']['page']}]\n{r['text']}"
         for r in retrieved
     )
 
@@ -546,9 +581,9 @@ def ask_rag(question):
 
 # Preguntas de prueba
 questions = [
-    "�Cu�l es la duraci�n m�xima del contrato seg�n el convenio del metal?",
-    "�Qu� dice el BOE sobre teletrabajo en estos convenios?",
-    "Resume el art�culo 15 del convenio de hosteler�a."
+    "¿Cuál es la duración máxima del contrato según el convenio del metal?",
+    "¿Qué dice el BOE sobre teletrabajo en estos convenios?",
+    "Resume el artículo 15 del convenio de hostelería."
 ]
 
 
@@ -557,20 +592,122 @@ for q in questions:
     text = f"QUESTION:\n{q}\nANSWER:\n{ask_rag(q)}\n{'-'*15}\n\n"
     print(text)
     results += text
-with open("results_b3.txt","w") as file:
+with open("results/results_b3.txt","w") as file:
     file.write(results)
 
-**PR�CTICA BLOQUE 4 � Tools, Function Calling y control expl�cito**
+
+----- ARCHIVO: bloque3/bloque3.md -----
+
+### PRÁCTICA BLOQUE 3 · RAG como corrección estructural del modelo
+
+1. Objetivo del bloque 3
+
+El objetivo no es que el modelo “tenga más información”, sino separar comportamiento y conocimiento.
+
+Al finalizar el bloque, los alumnos deben poder demostrar con datos:
+
+* Qué errores del bloque 1 y 2 no se pueden resolver con fine-tuning
+* Cómo RAG reduce alucinaciones solo si está bien diseñado
+* En qué casos RAG empeora la respuesta
+* Qué decisiones de chunking, recuperación y prompt afectan directamente a la calidad
+
+Este bloque introduce conocimiento externo sin reentrenar el modelo.
+
+2. Diseño conceptual del RAG (antes de código)
+
+Se fuerza a los alumnos a decidir explícitamente:
+
+* Qué documentos son “fuente de verdad”
+* Qué tamaño de chunk tiene sentido
+* Qué ocurre cuando no hay evidencia recuperable
+* Cómo se obliga al modelo a citar o abstenerse
+
+Restricción clave: El modelo no puede responder usando conocimiento previo si no hay contexto recuperado.
+
+3. Corpus documental del bloque
+
+Se recomienda un corpus pequeño pero realista con PDFs o TXT. 
+
+En este caso la carpeta "BOE" con diferentes convenios nacionales.
+
+4. Ingesta de PDFs del BOE con chunking explícito
+
+Objetivo técnico del punto 4
+
+Transformar una carpeta BOE/ con múltiples PDFs en:
+
+* Un conjunto de chunks textuales trazables
+* Un índice vectorial reproducible
+* Metadatos suficientes para auditar de dónde sale cada respuesta
+
+Restricción clave del bloque: No se permite responder sin evidencia recuperada.
+
+```pgsql
+BOE/
+ ├── convenio_metal_2022.pdf
+ ├── convenio_hosteleria_2023.pdf
+ ├── convenio_quimicas_2021.pdf
+
+rag_store/
+ ├── index.faiss
+ ├── chunks.json
+```
+
+Decisiones de diseño previas al código:
+
+* Extracción de texto por página (no todo el PDF de golpe)
+* Chunking por tamaño fijo con solape
+* Persistencia de metadatos: pdf, página, chunk_id
+* Embeddings separados del modelo generativo
+
+Esto permite luego analizar errores de recuperación, no solo de generación.
+
+**Crear bloque3.1.py para ingesta**
+
+5. **Crear bloque3.1.py para consulta RAG**
+
+6. Análisis guiado obligatorio del bloque 3
+
+Cada grupo debe documentar:
+
+* ¿Recupera el chunk correcto pero responde mal?
+* ¿Responde bien con chunk parcial?
+* ¿Se apoya demasiado en frases genéricas del BOE?
+* ¿Hay casos donde el modelo debería decir “no lo sé” y no lo hace?
+
+Identificar explícitamente:
+
+* Alucinaciones con contexto presente
+* Alucinaciones con contexto insuficiente
+* Falsos positivos por similitud semántica
+
+7. Puente natural al bloque 4
+
+Este punto queda sembrado de forma intencionada:
+
+Problemas no resueltos todavía:
+
+* El modelo no decide cuándo buscar más información
+* No valida si el contexto es suficiente
+* No puede ejecutar búsquedas dirigidas por artículo
+* No razona sobre contradicciones entre convenios
+* Eso justifica tools, function calling y agentes en el siguiente bloque, no como moda, sino como necesidad técnica.
+
+===== CARPETA: bloque4 =====
+
+----- ARCHIVO: bloque4/bloque4.md -----
+
+**PRÁCTICA BLOQUE 4 · Tools, Function Calling y control explícito**
 
 1. Objetivo del bloque 4
 
-Transformar el sistema de modelo que responde con contexto en modelo que decide qu� informaci�n necesita y c�mo obtenerla.
+Transformar el sistema de “modelo que responde con contexto” en “modelo que decide qué información necesita y cómo obtenerla”.
 
 Al finalizar el bloque, los alumnos deben demostrar:
 
-* Que el modelo elige conscientemente qu� PDF consultar
-* Que reconoce cu�ndo no tiene informaci�n suficiente
-* Que no inventa convenios ni art�culos
+* Que el modelo elige conscientemente qué PDF consultar
+* Que reconoce cuándo no tiene información suficiente
+* Que no inventa convenios ni artículos
 * Que toda respuesta pasa por herramientas controladas
 * Que las salidas son validables y seguras
 
@@ -578,49 +715,50 @@ Este bloque no mejora el modelo, mejora el sistema.
 
 2. Concepto operativo de tools y function calling
 
-Una tool es una funci�n externa, determinista, auditable, que ejecuta acciones que el modelo no puede ni debe hacer por s� solo.
+Una tool es una función externa, determinista, auditable, que ejecuta acciones que el modelo no puede ni debe hacer por sí solo.
 
-Principio clave: El LLM no ejecuta l�gica, solo elige.
+Principio clave: El LLM no ejecuta lógica, solo elige.
 
-3. Tool 1 � Selecci�n de convenio (PDF routing)
+3. Tool 1 · Selección de convenio (PDF routing)
 
 Se buscan resolver los siguientes problemas del modelo:
 
 * No distingue bien entre convenios
-* Recupera chunks sem�nticamente cercanos pero conceptualmente incorrectos
+* Recupera chunks semánticamente cercanos pero conceptualmente incorrectos
 * Mezcla fuentes
 
-Para ello haremos una tool decide qu� PDF es el m�s adecuado
+Para ello haremos una tool decide qué PDF es el más adecuado
 
-4. Preparaci�n � Descripci�n controlada de convenios
+4. Preparación · Descripción controlada de convenios
 
 Creamos **description.json**, un fichero determinista, auditable y cerrado, que el modelo solo puede leer, no modificar.
 
-5. Creaci�n de la tool e integraci�n con RAG
+5. Creación de la tool e integración con RAG
 
 Nombre: select_convenio
 Archivo: **bloque4.py**
-Responsabilidad �nica:
-Dada una pregunta, decidir qu� PDF es relevante o declarar que ninguno aplica.
+Responsabilidad única:
+Dada una pregunta, decidir qué PDF es relevante o declarar que ninguno aplica.
 
 Principios de seguridad:
 
 * Output estructurado
 * Dominio cerrado
-* Decisi�n expl�cita
-* Posibilidad de no s�
+* Decisión explícita
+* Posibilidad de “no sé”
 
-6. An�lisis del bloque 4
+6. Análisis del bloque 4
 
 Cada grupo debe demostrar con ejemplos:
 
 * Casos donde antes fallaba y ahora no responde
 * Casos donde elige correctamente el convenio
 * Casos ambiguos donde responde NONE
-* Casos l�mite entre hosteler�a / restauraci�n / turismo
-* Qu� errores siguen sin resolverse
+* Casos límite entre hostelería / restauración / turismo
+* Qué errores siguen sin resolverse
 
-bloque4.py
+
+----- ARCHIVO: bloque4/bloque4.py -----
 
 import json
 import faiss
@@ -661,19 +799,19 @@ embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 base_model = AutoModelForCausalLM.from_pretrained(
     "google/gemma-2-9b-it",
     device_map="auto",
-    torch_dtype=torch.float16
+    dtype=torch.float16
 )
 model = PeftModel.from_pretrained(base_model, "./lora_model")
 tokenizer = AutoTokenizer.from_pretrained("./lora_model")
 
 # =============================
-# TOOL 1 � ROUTER
+# TOOL 1 · ROUTER
 # =============================
 
 system_prompt_router = """
 Eres un clasificador experto en convenios colectivos.
 
-Tu �nica tarea es decidir qu� convenio es relevante para una pregunta.
+Tu única tarea es decidir qué convenio es relevante para una pregunta.
 
 Reglas estrictas:
 - Solo puedes elegir uno de los PDFs listados.
@@ -697,7 +835,7 @@ def select_convenio(question):
 <USER>
 Pregunta: {question}
 
-Responde �nicamente con el nombre exacto del PDF o NONE.
+Responde únicamente con el nombre exacto del PDF o NONE.
 </USER>
 
 <ASSISTANT>
@@ -711,7 +849,7 @@ Responde �nicamente con el nombre exacto del PDF o NONE.
 
     raw_answer = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-    # Regex para extraer un PDF v�lido o NONE
+    # Regex para extraer un PDF válido o NONE
     match = re.search(r'<ASSISTANT>\s*([a-zA-Z0-9_]+\.pdf|NONE)\s*</ASSISTANT>', raw_answer)
 
     if match:
@@ -732,7 +870,7 @@ Responde �nicamente con el nombre exacto del PDF o NONE.
 
 def retrieve_context(question, pdf_name, k=TOP_K):
     q_emb = embedder.encode([question])
-    _, idxs = index.search(q_emb, 20)  # b�squeda amplia
+    _, idxs = index.search(q_emb, 20)  # búsqueda amplia
 
     filtered = []
     for i in idxs[0]:
@@ -748,12 +886,12 @@ def retrieve_context(question, pdf_name, k=TOP_K):
 # =============================
 
 system_prompt_answer = """
-Eres un asistente acad�mico riguroso especializado en convenios colectivos.
+Eres un asistente académico riguroso especializado en convenios colectivos.
 
 Reglas obligatorias:
-- Solo puedes usar la informaci�n del CONTEXTO.
-- Si el contexto no contiene la respuesta, di expl�citamente que no lo sabes.
-- No completes ni infieras informaci�n.
+- Solo puedes usar la información del CONTEXTO.
+- Si el contexto no contiene la respuesta, di explícitamente que no lo sabes.
+- No completes ni infieras información.
 - No mezcles convenios.
 """
 
@@ -761,15 +899,15 @@ def answer_question(question):
     pdf = select_convenio(question)
 
     if pdf is None:
-        return "No puedo determinar el convenio aplicable con la informaci�n disponible."
+        return "No puedo determinar el convenio aplicable con la información disponible."
 
     retrieved = retrieve_context(question, pdf)
 
     if not retrieved:
-        return f"No se ha encontrado informaci�n relevante en el convenio {pdf}."
+        return f"No se ha encontrado información relevante en el convenio {pdf}."
 
     context_text = "\n\n".join(
-        f"[Fuente: {r['meta']['source']} | P�gina {r['meta']['page']}]\n{r['text']}"
+        f"[Fuente: {r['meta']['source']} | Página {r['meta']['page']}]\n{r['text']}"
         for r in retrieved
     )
 
@@ -804,10 +942,10 @@ def answer_question(question):
 # =============================
 
 questions = [
-    "�Cu�l es la jornada laboral anual en el convenio del metal?",
-    "�Qu� dice el convenio de hosteler�a sobre turnos partidos?",
-    "�Existe regulaci�n de teletrabajo en estos convenios?",
-    "�Cu�l es el salario base en el sector aeroespacial?"
+    "¿Cuál es la jornada laboral anual en el convenio del metal?",
+    "¿Qué dice el convenio de hostelería sobre turnos partidos?",
+    "¿Existe regulación de teletrabajo en estos convenios?",
+    "¿Cuál es el salario base en el sector aeroespacial?"
 ]
 
 results = ""
@@ -815,31 +953,38 @@ for q in questions:
     text = f"QUESTION:\n{q}\nANSWER:\n{answer_question(q)}\n{'-'*15}\n\n"
     print(text)
     results += text
-with open("results_b4.txt","w") as file:
+with open("results/results_b4.txt","w") as file:
     file.write(results)
 
-description.json
+
+----- ARCHIVO: bloque4/description.json -----
+
 {
-  "audiovisual.pdf": "Convenio colectivo del sector audiovisual: producci�n, distribuci�n y servicios t�cnicos de contenidos audiovisuales.",
-  "consultora_tecnologica.pdf": "Convenio colectivo de empresas de consultor�a tecnol�gica, inform�tica y servicios digitales.",
-  "hosteleria.pdf": "Convenio colectivo del sector de hosteler�a: hoteles, alojamientos tur�sticos y servicios asociados.",
-  "metal.pdf": "Convenio colectivo del sector del metal: fabricaci�n, mantenimiento y montaje industrial.",
-  "restauracion.pdf": "Convenio colectivo de restauraci�n: bares, cafeter�as y servicios de comida.",
+  "audiovisual.pdf": "Convenio colectivo del sector audiovisual: producción, distribución y servicios técnicos de contenidos audiovisuales.",
+  "consultora_tecnologica.pdf": "Convenio colectivo de empresas de consultoría tecnológica, informática y servicios digitales.",
+  "hosteleria.pdf": "Convenio colectivo del sector de hostelería: hoteles, alojamientos turísticos y servicios asociados.",
+  "metal.pdf": "Convenio colectivo del sector del metal: fabricación, mantenimiento y montaje industrial.",
+  "restauracion.pdf": "Convenio colectivo de restauración: bares, cafeterías y servicios de comida.",
   "cemento.pdf": "Convenio colectivo de la industria del cemento y derivados.",
-  "educacion.pdf": "Convenio colectivo del sector educativo: ense�anza reglada y no reglada.",
-  "madera.pdf": "Convenio colectivo de la industria de la madera, carpinter�a y mueble.",
+  "educacion.pdf": "Convenio colectivo del sector educativo: enseñanza reglada y no reglada.",
+  "madera.pdf": "Convenio colectivo de la industria de la madera, carpintería y mueble.",
   "pescanova.pdf": "Convenio colectivo de la empresa Pescanova y su actividad industrial y comercial.",
   "taxi.pdf": "Convenio colectivo del sector del taxi y transporte urbano de viajeros.",
-  "cepsa.pdf": "Convenio colectivo de la empresa CEPSA y su actividad energ�tica e industrial.",
-  "electricista.pdf": "Convenio colectivo de instalaciones el�ctricas y telecomunicaciones.",
-  "medicina.pdf": "Convenio colectivo del sector sanitario y servicios m�dicos.",
-  "renault.pdf": "Convenio colectivo de la empresa Renault y su actividad industrial automovil�stica.",
-  "textil.pdf": "Convenio colectivo del sector textil, confecci�n y moda.",
-  "construccion.pdf": "Convenio colectivo del sector de la construcci�n y obras p�blicas.",
-  "fruta.pdf": "Convenio colectivo del sector de manipulado y comercializaci�n de frutas.",
-  "mercadona.pdf": "Convenio colectivo de la empresa Mercadona y su actividad de distribuci�n comercial.",
+  "cepsa.pdf": "Convenio colectivo de la empresa CEPSA y su actividad energética e industrial.",
+  "electricista.pdf": "Convenio colectivo de instalaciones eléctricas y telecomunicaciones.",
+  "medicina.pdf": "Convenio colectivo del sector sanitario y servicios médicos.",
+  "renault.pdf": "Convenio colectivo de la empresa Renault y su actividad industrial automovilística.",
+  "textil.pdf": "Convenio colectivo del sector textil, confección y moda.",
+  "construccion.pdf": "Convenio colectivo del sector de la construcción y obras públicas.",
+  "fruta.pdf": "Convenio colectivo del sector de manipulado y comercialización de frutas.",
+  "mercadona.pdf": "Convenio colectivo de la empresa Mercadona y su actividad de distribución comercial.",
   "renfe.pdf": "Convenio colectivo de la empresa Renfe y su actividad ferroviaria."
 }
+
+
+===== CARPETA: bloque5 =====
+
+----- ARCHIVO: bloque5/bloque5.md -----
 
 # PRÁCTICA BLOQUE 5 · Agentes NLP controlados y razonamiento multi-fuente
 
@@ -1067,6 +1212,8 @@ El bloque 5 se considera superado si:
 Este bloque no busca respuestas brillantes, sino **sistemas fiables**.
 
 
+----- ARCHIVO: bloque5/bloque5.py -----
+
 import json
 import faiss
 import torch
@@ -1265,6 +1412,10 @@ for q in questions:
 
 with open("results/results_b5.txt", "w") as f:
     f.write(results)
+
+===== CARPETA: bloque6 =====
+
+----- ARCHIVO: bloque6/bloque6.md -----
 
 # PRÁCTICA BLOQUE 6 · Evaluación avanzada y auditable de sistemas NLP
 
@@ -1465,6 +1616,9 @@ Este bloque transforma el proyecto en un **sistema evaluable**, no solo funciona
 python -m bloque6.bloque6
 ```
 
+
+----- ARCHIVO: bloque6/bloque6.py -----
+
 # bloque6.py
 import json
 from datetime import datetime
@@ -1620,29 +1774,44 @@ with open(RESULTS_FILE, "w", encoding="utf-8") as f:
 
 print("Evaluación completada.")
 
-Quiero que procedamos con el bloque 7
+----- ARCHIVO: bloque6/eval_dataset_b6.json -----
 
-**Bloque 7. Puesta en producción (2 horas)**
+[
+  {
+    "id": "E1",
+    "question": "¿Cuál es la jornada laboral anual en el convenio del metal?",
+    "expected_pdfs": ["metal.pdf"],
+    "should_answer": true,
+    "notes": "Pregunta factual directa con evidencia clara"
+  },
+  {
+    "id": "E2",
+    "question": "¿Existe regulación de teletrabajo en estos convenios?",
+    "expected_pdfs": ["fruta.pdf", "medicina.pdf", "educacion.pdf", "taxi.pdf", "pescanova.pdf", "electricista.pdf", "renault.pdf", "renfe.pdf", "restauracion.pdf", "madera.pdf", "hosteleria.pdf", "cemento.pdf", "consultora_tecnologica.pdf", "cepsa.pdf", "audiovisual.pdf", "metal.pdf", "mercadona.pdf", "textil.pdf", "construccion.pdf"],
+    "should_answer": true,
+    "notes": "Pregunta transversal, posible respuesta parcial"
+  },
+  {
+    "id": "E3",
+    "question": "¿Cuál es el salario base en el sector aeroespacial?",
+    "expected_pdfs": [],
+    "should_answer": false,
+    "notes": "Sector no cubierto por ningún convenio disponible"
+  },
+  {
+    "id": "E4",
+    "question": "¿Qué diferencia hay en los salarios base entre medicina y hostelería?",
+    "expected_pdfs": ["medicina.pdf", "hosteleria.pdf"],
+    "should_answer": true,
+    "notes": "Comparación multi-convenio"
+  },
+  {
+    "id": "E5",
+    "question": "Resume el artículo 99 del convenio del metal.",
+    "expected_pdfs": ["metal.pdf"],
+    "should_answer": false,
+    "notes": "Artículo inexistente, el sistema debe abstenerse"
+  }
+]
 
-Objetivo: dejar el sistema listo para uso real.
 
-Contenidos:
-* Arquitectura de despliegue
-* APIs y serving de modelos
-* Gestión de versiones
-* Seguridad y costes
-* Monitorización en producción
-
-**Práctica: Preparación para producción**
-
-Objetivo práctico: cerrar el ciclo de vida.
-
-Trabajo práctico:
-* Exposición del sistema como API
-* Gestión de configuración y versiones
-* Logging, métricas y monitorización básica
-* Análisis de costes y escalabilidad
-
-Entrega final:
-* Sistema desplegable
-* Documento técnico completo del proyecto
