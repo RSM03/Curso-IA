@@ -22,13 +22,13 @@ with open(EVAL_FILE, "r", encoding="utf-8") as f:
 # =============================
 # LOAD JUDGE MODEL
 # =============================
-judge_base = AutoModelForCausalLM.from_pretrained(
-    "google/gemma-2-9b-it",
-    device_map="auto",
-    dtype=torch.float16
+model_name = "google/gemma-3-12b-it"
+
+judge_tokenizer = AutoTokenizer.from_pretrained(model_name)
+judge_model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    device_map="auto"
 )
-judge_model = PeftModel.from_pretrained(judge_base, "./lora_model")
-judge_tokenizer = AutoTokenizer.from_pretrained("./lora_model")
 
 # =============================
 # JUDGE PROMPT
@@ -36,26 +36,33 @@ judge_tokenizer = AutoTokenizer.from_pretrained("./lora_model")
 JUDGE_SYSTEM = """
 Eres un evaluador técnico de sistemas NLP.
 
-Evalúa la respuesta según estos criterios:
+Evalúa la respuesta del sistema teniendo en cuenta:
 1. Corrección factual respecto al contexto
-2. Uso adecuado de fuentes
-3. Ausencia de invención
+2. Uso adecuado y coherente de las fuentes
+3. Presencia de invención o extrapolación no justificada
+4. Acción tomada por el sistema:
+   - ANSWERED: proporciona una respuesta sustantiva
+   - ABSTAINED: decide no responder por falta de información suficiente
 
-Devuelve un JSON con:
-- factual_correct 0-10
-- source_consistent 0-10
-- hallucination 0-10
+Devuelve exclusivamente un JSON con:
+- factual_correct: entero de 0 a 10
+- source_consistent: entero de 0 a 10
+- hallucination: entero de 0 a 10
+- system_action: "ANSWERED" o "ABSTAINED"
+- justification: breve explicación técnica de la evaluación
+
+Es de vital importancia que el formato del json sea correcto, con llave de apertura y cerrado, strings entre comillas, etc.
 
 Ej.:
 ```json
 {
  "factual_correct": 7,
  "source_consistent": 8,
- "hallucination": 2
+ "hallucination": 2,
+ "system_action": "ANSWERED",
+ "justification": "He elegido poner un 7 en factual_correct porque..."
 }
 ```
-
-ES DE VITAL IMPORTANCIA QUE RESPONDAS SOLO CON EL JSON. Prohibido texto fuera del bloque JSON.
 """
 def extract_last_json(text):
     matches = re.findall(r'```json\s*(.*?)\s*```', text, flags=re.DOTALL)
@@ -83,21 +90,34 @@ def judge_answer(question, answer, context):
 
 <ASSISTANT>
 """
-    inputs = judge_tokenizer(prompt, return_tensors="pt").to(judge_model.device)
-    outputs = judge_model.generate(**inputs, max_new_tokens=200, do_sample=False)
+    with torch.no_grad():
+        inputs = judge_tokenizer(prompt, return_tensors="pt").to(judge_model.device)
+        outputs = judge_model.generate(**inputs, max_new_tokens=300, do_sample=False)
     raw = judge_tokenizer.decode(outputs[0], skip_special_tokens=True)
+    del inputs
+    del outputs
+    torch.cuda.empty_cache()
 
+    json_default = {
+      "factual_correct": 7,
+      "source_consistent": 8,
+      "hallucination": 2,
+      "system_action": "ANSWERED",
+      "justification": "He elegido poner un 7 en factual_correct porque..."
+    }
+
+    
+    default_answer = "No se ha podido evaluar"
     try:
         json_text = extract_last_json(raw)
-        print(json_text)
-        return json.loads(json_text)
+        json_formated = json.loads(json_text)
+        if json_formated==json_default:
+            json_formated = default_answer
+            print(raw)
+        return json_formated
     except:
         print(raw)
-        return {
-            "factual_correct": False,
-            "source_consistent": False,
-            "hallucination": True
-        }
+        return default_answer
 
 # =============================
 # RUN EVALUATION
@@ -112,22 +132,18 @@ for sample in eval_data:
     answer = agent.act(question)
     context = str(agent.memory[-1])
 
-    auto_abstained = "no puedo" in answer.lower()
-
-    auto_eval = {
-        "correct_abstention": (not should_answer and auto_abstained),
-        "incorrect_abstention": (should_answer and auto_abstained)
-    }
-
     judge_eval = judge_answer(question, answer, context)
 
     results.append({
         "question": question,
         "answer": answer,
-        "auto_eval": auto_eval,
         "judge_eval": judge_eval,
         "timestamp": datetime.now().isoformat()
     })
+
+    del judge_eval
+    torch.cuda.empty_cache()
+    torch.cuda.ipc_collect()
 
 # =============================
 # SAVE RESULTS

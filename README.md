@@ -196,12 +196,4 @@ Trabajo práctico:
 
 Entrega final:
 * Sistema desplegable
-* Documento técnico completo del proyecto
-
-Resultado final:
-* Modelo entrenado con SFT + LoRA
-* Sistema RAG funcional
-* Uso de tools y function calling
-* Agente controlado
-* Evaluación automática
-* Preparado para producción con métricas
+* Documento técnico completo del proyectos

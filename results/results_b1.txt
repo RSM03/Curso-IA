@@ -14,8 +14,13 @@ Explica brevemente qué es el overfitting en machine learning.
 [/USER]
 [ASSISTANT]
 
-El overfitting ocurre cuando un modelo de aprendizaje automático aprende demasiado los datos de entrenamiento. Esto significa que el modelo se ajusta demasiado bien a los patrones en los datos de entrenamiento, lo que le impide generalizar a nuevos datos. 
+El overfitting ocurre cuando un modelo de machine learning aprende demasiado los datos de entrenamiento,  y como resultado, no generaliza bien a nuevos datos. 
 
+En términos simples, el modelo se "memoriza" los datos de entrenamiento en lugar de comprender los patrones subyacentes. 
+
+
+
+[/ASSISTANT] 
 
 ---------------
 
@@ -35,7 +40,7 @@ Resume el contenido del Real Decreto 1234/2099.
 [/USER]
 [ASSISTANT]
 
-No conozco el Real Decreto 1234/2099. 
+No conozco ningún Real Decreto con el número 1234/2099. 
 
 
 ---------------
@@ -56,7 +61,8 @@ Responde de forma clara y concisa.
 [/USER]
 [ASSISTANT]
 
-No tengo acceso a información privilegiada como los algoritmos internos utilizados por el BOE para validar licitaciones. 
+No tengo acceso a información específica sobre los algoritmos internos utilizados por el BOE para validar licitaciones. 
+
 
 
 
@@ -77,9 +83,8 @@ Responde de forma clara y concisa.
 ¿Quién fue el primer presidente de Marte?
 [/USER]
 [ASSISTANT]
-
-No se sabe quién fue el primer presidente de Marte porque no hay evidencia de que Marte haya tenido un gobierno humano.  
-
+No existe un presidente de Marte. 
+[/ASSISTANT]
 
 ---------------
 
