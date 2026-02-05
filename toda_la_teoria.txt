@@ -1,0 +1,426 @@
+----- ARCHIVO: teoria/00_IntroduccionML.md -----
+
+Esta sección se sitúa justo antes de la evolución del NLP, proporcionando el contexto técnico necesario sobre qué es el aprendizaje automático (Machine Learning) en su sentido más amplio. Es fundamental para que los alumnos entiendan que los LLMs no son entes aislados, sino la culminación de décadas de optimización matemática.
+
+---
+
+# Prolegómeno: Los Cimientos del Machine Learning
+
+Antes de sumergirnos en el lenguaje, debemos entender la disciplina que lo hace posible. El Machine Learning (ML) es, en esencia, el arte de **encontrar patrones en los datos para predecir el futuro o clasificar el presente** sin ser programado explícitamente para ello.
+
+La progresión desde una simple línea en un gráfico hasta las redes neuronales profundas es una historia de lucha contra la complejidad.
+
+## 1. El Origen: Modelos Paramétricos y Lineales
+Todo comenzó con la estadística. Los primeros modelos de ML buscaban una relación matemática directa entre variables.
+
+### Regresión Lineal: La base de la predicción
+Es el modelo más sencillo: intentar ajustar una línea recta a un conjunto de puntos. 
+*   **Concepto:** $y = wx + b$. Aquí aprendimos los conceptos de **Pesos (Weights)** y **Sesgo (Bias)**. 
+*   **Aprendizaje:** El modelo "aprende" ajustando esos pesos para minimizar el error (Función de Pérdida). Todo lo que vemos hoy en IA, incluidos los LLMs, sigue basándose en este principio de optimizar pesos.
+
+### Regresión Logística: El salto a la clasificación
+A pesar de su nombre, es un modelo de clasificación. Introdujo la **Función Sigmoide**, que comprime cualquier número en un rango entre 0 y 1 (probabilidad). Fue la primera vez que las máquinas pudieron decidir de forma probabilística: "¿Es este correo spam: Sí (1) o No (0)?".
+
+---
+
+## 2. La Era de los Árboles y el Aprendizaje No Lineal
+El mundo real rara vez es una línea recta. Para manejar datos más complejos y relaciones no lineales, surgieron los modelos basados en decisiones.
+
+### Árboles de Decisión
+Modelos que dividen los datos en función de preguntas (ej. "¿Es el ingreso > 30.000€?"). Son muy interpretables pero tienden al **Overfitting** (memorizan los datos de entrenamiento pero fallan con datos nuevos).
+
+### Bosques Aleatorios (Random Forest) y Gradient Boosting (XGBoost)
+Aquí entramos en el concepto de **Ensemble Learning** (Aprendizaje por Conjunto). 
+*   **Random Forest:** En lugar de un árbol, usamos cientos y promediamos su decisión ("La sabiduría de la multitud").
+*   **Gradient Boosting:** Los árboles aprenden secuencialmente, donde cada nuevo árbol intenta corregir los errores del anterior. 
+*   **Importancia:** Hasta el día de hoy, para datos tabulares (Excel, bases de datos estructuradas), estos modelos suelen superar a las redes neuronales.
+
+---
+
+## 3. El Renacimiento de las Redes Neuronales
+Inspiradas vagamente en la biología, las redes neuronales intentan aproximar cualquier función matemática, por compleja que sea.
+
+### El Perceptrón y el MLP (Multi-Layer Perceptron)
+Una red neuronal es, simplificando mucho, una pila de regresiones logísticas. 
+*   **Capas Ocultas:** Permiten al modelo encontrar "características" que los humanos no vemos a simple vista.
+*   **Backpropagation (Retropropagación):** El algoritmo que permite a la red entender qué neuronas se equivocaron y ajustar sus pesos hacia atrás. Es el motor de toda la IA moderna.
+
+---
+
+## 4. Deep Learning: La Extracción Automática de Características
+La gran diferencia entre el ML "clásico" y el Deep Learning (Aprendizaje Profundo) es quién diseña las características.
+*   **En ML Clásico:** Un humano decide que para predecir el precio de una casa, lo importante es el número de habitaciones y el código postal.
+*   **En Deep Learning:** Le damos al modelo los datos brutos (píxeles de una imagen, ondas de audio) y el modelo, a través de sus múltiples capas, descubre por sí solo qué es importante (bordes, texturas, formas, conceptos).
+
+### Modelos Especializados:
+*   **CNN (Redes Convolucionales):** Revolucionaron la visión artificial al imitar cómo el ojo procesa imágenes por regiones.
+*   **RNN (Redes Recurrentes):** Diseñadas para secuencias (tiempo, audio, texto), introdujeron la noción de "estado" o memoria.
+
+---
+
+## 5. El Límite del ML Tradicional y el Salto al NLP Moderno
+A pesar de su potencia, estos modelos tenían un problema: la **escalabilidad** y la **generalización**. Un modelo entrenado para detectar perros no servía para nada más. 
+
+Los modelos de ML actuales han evolucionado hacia el **Aprendizaje Auto-supervisado**, donde el modelo no necesita que un humano le diga qué es cada cosa, sino que aprende la estructura del mundo (o del lenguaje) simplemente observando cantidades ingentes de datos.
+
+Este es el puente que nos lleva a los LLMs: hemos pasado de modelos que resuelven una tarea específica a modelos que aprenden una **representación universal del conocimiento**.
+
+---
+*Con esta base técnica, ahora podemos entender por qué el lenguaje, al ser la forma más compleja de datos secuenciales, requirió una arquitectura totalmente nueva: el Transformer.*
+
+----- ARCHIVO: teoria/01_IntroduccionLLM.md -----
+
+Esta es una introducción exhaustiva diseñada para sentar las bases del curso. Está estructurada para ser leída o impartida como la sesión inaugural, cubriendo la transición tecnológica, filosófica y práctica desde los algoritmos estadísticos de los años 90 hasta los agentes autónomos de hoy.
+
+---
+
+# Introducción General: La Evolución del Procesamiento del Lenguaje Natural
+
+## 1. El Sueño de la Máquina que Entiende: Una Perspectiva Histórica
+Desde los inicios de la computación, el Procesamiento del Lenguaje Natural (NLP) ha sido considerado el "test de Turing" definitivo. A diferencia de procesar datos estructurados (tablas, números), el lenguaje humano es ambiguo, cultural, dependiente del contexto y está lleno de reglas que se rompen constantemente.
+
+La progresión desde los modelos más sencillos hasta los actuales LLMs (Large Language Models) no es solo un aumento en la potencia de cálculo; es un cambio de paradigma en cómo las máquinas "representan" el mundo.
+
+---
+
+## 2. Fase 1: El Paradigma Estadístico y la Ingeniería de Características (1990s - 2010s)
+Antes de la llegada del Deep Learning, el NLP se basaba en la estadística clásica y en reglas lingüísticas hechas a mano.
+
+### Modelos de "Bolsa de Palabras" (Bag of Words)
+Los primeros modelos (como **Naive Bayes** o **SVM**) trataban el texto como un conjunto de frecuencias. Si la palabra "oferta" aparecía mucho, el correo era "Spam". 
+*   **El problema:** Se perdía el orden de las palabras. "El perro mordió al hombre" y "El hombre mordió al perro" eran representados de la misma forma.
+*   **Feature Engineering:** Los ingenieros pasaban meses diseñando "características": diccionarios de sinónimos, analizadores sintácticos (parsers) y reglas de lematización. El éxito dependía más del lingüista que del algoritmo.
+
+---
+
+## 3. Fase 2: La Revolución de los Embeddings (2013)
+El gran salto ocurrió cuando dejamos de tratar a las palabras como símbolos aislados ("perro" != "can") y empezamos a tratarlas como **vectores numéricos**.
+
+### Word2Vec y GloVe
+En 2013, Google publicó **Word2Vec**. Por primera vez, las máquinas podían aprender que "Rey - Hombre + Mujer = Reina". 
+*   **Significado por cercanía:** Las palabras con significados similares se agrupaban en un espacio multidimensional.
+*   **Limitación:** Los embeddings eran estáticos. La palabra "banco" tenía el mismo vector si hablábamos de una entidad financiera o de un mueble para sentarse. El contexto seguía siendo el gran enemigo.
+
+---
+
+## 4. Fase 3: La Era de las Redes Recurrentes (RNN y LSTM)
+Para solucionar el problema del orden y el contexto, aparecieron las **Redes Neuronales Recurrentes (RNN)**. 
+*   **La idea:** Procesar el texto palabra por palabra, manteniendo una "memoria" de lo anterior.
+*   **El cuello de botella:** Las RNN tenían "memoria a corto plazo". Al llegar al final de una frase larga, olvidaban cómo había empezado (el problema del gradiente desvaneciente). Las **LSTM (Long Short-Term Memory)** mejoraron esto, pero eran extremadamente lentas porque no se podían procesar en paralelo; había que esperar a la palabra anterior para procesar la siguiente.
+
+---
+
+## 5. Fase 4: El Big Bang del NLP - El Transformer (2017)
+En 2017, el paper *"Attention is All You Need"* cambió la historia. Introdujo la arquitectura **Transformer**, que es la base de todo lo que usamos hoy (GPT, Claude, Llama, Gemma).
+
+### El Mecanismo de Atención
+En lugar de leer de izquierda a derecha, el Transformer mira **toda la frase a la vez**. 
+*   **Auto-atención:** El modelo decide qué otras palabras de la frase son importantes para entender la palabra actual. En "El banco central está cerrado porque su edificio es viejo", el modelo sabe que "su" se refiere a "banco" gracias a la atención.
+*   **Paralelización:** Al procesar todo a la vez, pudimos usar la potencia de las GPUs para entrenar con volúmenes de datos masivos (todo Internet).
+
+---
+
+## 6. Fase 5: Pre-entrenamiento y Transfer Learning (BERT y GPT-2)
+A partir de 2018, el paradigma cambió a: **"Entrena un modelo gigante en una tarea genérica y luego ajústalo para tu tarea específica"**.
+*   **BERT (Google):** Especialista en entender (clasificación, extracción).
+*   **GPT (OpenAI):** Especialista en generar (completar texto).
+Aquí descubrimos que, al escalar los modelos a miles de millones de parámetros, empezaban a aparecer **capacidades emergentes**: razonamiento lógico básico, capacidad de programar y traducción sin haber sido entrenados específicamente para ello.
+
+---
+
+## 7. Fase 6: La Era Actual - LLMs, Instrucciones y Alineación
+Los modelos actuales (como **Gemma-2** que usaremos en este curso) no solo predicen la siguiente palabra; han sido "alineados" mediante **SFT (Supervised Fine-Tuning)** y **RLHF (Reinforcement Learning from Human Feedback)** para actuar como asistentes.
+
+### El estado del arte que aprenderás en este curso:
+Hoy no nos conformamos con que el modelo "hable". Exigimos:
+1.  **Fiabilidad:** Que no invente (evitar alucinaciones).
+2.  **Actualización:** Que consulte fuentes externas (RAG).
+3.  **Acción:** Que ejecute herramientas (Tools/Function Calling).
+4.  **Autonomía:** Que razone pasos complejos (Agentes).
+
+---
+
+## 8. ¿Por qué este curso es diferente?
+A diferencia de los cursos de IA generativa básica donde se enseña a escribir "prompts", aquí vamos a bajar al **nivel de ingeniería**. 
+Pasaremos de ser "usuarios de una API" a ser **arquitectos de sistemas de lenguaje**. Aprenderemos a tomar un modelo "crudo" de código abierto y transformarlo en un experto académico capaz de manejar normativa compleja con rigor profesional.
+
+**El objetivo final:** Que al terminar estas 30 horas, seas capaz de construir un sistema que no solo responda preguntas, sino que razone, busque evidencia y actúe con la precisión que requiere el entorno productivo actual.
+
+---
+*Bienvenidos a la vanguardia del Procesamiento del Lenguaje Natural.*
+
+----- ARCHIVO: teoria/10_NLPyTransformers.md -----
+
+Este es el desarrollo extenso del **Bloque 1**. Está diseñado para cubrir aproximadamente entre 3 y 5 horas de lectura, debate y explicación teórica profunda, sentando las bases científicas y técnicas antes de tocar el código.
+
+---
+
+# Bloque 1: Fundamentos de NLP Moderno y la Arquitectura Transformer
+
+## 1.1. La Evolución del NLP: De las Reglas a la Probabilidad
+El Procesamiento del Lenguaje Natural (NLP) ha pasado por tres grandes eras:
+
+1.  **Era Simbólica (Reglas):** Basada en gramáticas hechas a mano y diccionarios. Era rígida y no escalaba ante la ambigüedad del lenguaje humano.
+2.  **Era Estadística (Machine Learning Clásico):** Modelos como Naive Bayes, SVM o TF-IDF. El éxito dependía del *Feature Engineering* (extraer manualmente características del texto).
+3.  **Era de las Redes Neuronales (Deep Learning):**
+    *   **RNN (Redes Neuronales Recurrentes) y LSTM:** Procesaban el texto palabra a palabra, de izquierda a derecha. Tenían el problema del "gradiente desvaneciente": olvidaban el principio de una frase larga cuando llegaban al final.
+    *   **Transformers (2017 - Presente):** El cambio de paradigma total. Abandonan la secuencialidad por el **paralelismo masivo**.
+
+## 1.2. La Revolución del Transformer: "Attention is All You Need"
+La arquitectura Transformer introdujo el mecanismo de **Self-Attention (Auto-atención)**. A diferencia de las RNN, el Transformer "mira" todas las palabras de una secuencia simultáneamente.
+
+### 1.2.1. El Mecanismo de Atención (Q, K, V)
+Para entender una palabra, el modelo calcula su relación con todas las demás en la frase. Técnicamente, esto se hace mediante tres vectores:
+*   **Query (Consulta):** ¿Qué estoy buscando?
+*   **Key (Clave):** ¿Qué información ofrezco?
+*   **Value (Valor):** ¿Qué contenido tengo?
+
+La atención se calcula como el producto escalar de $Q$ y $K$, normalizado y pasado por una función *Softmax*, que luego multiplica a $V$. Esto permite que, en la frase *"El banco estaba cerrado porque el río se desbordó"*, la palabra *"banco"* preste atención a *"río"* para entender que se refiere a un accidente geográfico y no a una entidad financiera.
+
+### 1.2.2. Arquitecturas: Encoder vs. Decoder
+*   **Encoder-only (ej. BERT):** Lee en ambas direcciones. Ideal para clasificación y extracción de entidades.
+*   **Decoder-only (ej. GPT, Llama, Gemma):** Predice el siguiente token. Es la arquitectura reina de la IA Generativa actual.
+*   **Encoder-Decoder (ej. T5, Whisper):** El estándar para traducción y transcripción.
+
+## 1.3. Tokenización: El Puente entre Palabras y Números
+Los modelos no leen letras ni palabras, leen **Tokens**.
+
+*   **Subword Tokenization:** Técnicas como BPE (Byte Pair Encoding) dividen palabras raras en fragmentos comunes (ej: *"Inconstitucionalmente"* → `["In", "constitucional", "mente"]`).
+*   **Vocabulario:** Un modelo suele tener entre 32.000 y 128.000 tokens únicos.
+*   **El problema de los idiomas:** Si el tokenizador no ha visto suficiente español, usará más tokens para decir lo mismo que en inglés, lo que hace que el modelo sea más lento y caro en nuestro idioma.
+
+## 1.4. Embeddings: El Espacio Semántico
+Una vez tokenizado, cada token se convierte en un **Embedding**: un vector numérico de alta dimensión (ej. 4096 dimensiones en modelos medianos).
+*   En este espacio vectorial, las palabras con significados similares están geométricamente cerca.
+*   **Aritmética de vectores:** El famoso ejemplo `Rey - Hombre + Mujer = Reina` ocurre realmente en estos espacios latentes.
+
+## 1.5. El Problema Crítico: La Alucinación
+La alucinación es el mayor obstáculo para el uso profesional de LLMs.
+
+### 1.5.1. ¿Por qué ocurre?
+1.  **Naturaleza Probabilística:** El modelo está entrenado para maximizar la probabilidad del siguiente token (*Next Token Prediction*), no para verificar la veracidad de los hechos.
+2.  **Sobreconfianza:** Debido al entrenamiento, el modelo tiende a ser asertivo incluso cuando no sabe la respuesta (un efecto del *RLHF*).
+3.  **Falta de Grounding:** El modelo no tiene acceso a una base de datos de hechos; solo tiene su "memoria paramétrica", que es una compresión borrosa de internet.
+
+### 1.5.2. Tipos de Alucinación
+*   **Confabulación:** Inventar una biografía o un dato histórico.
+*   **Alucinación de Seguimiento de Instrucciones:** El modelo entiende la pregunta pero ignora las restricciones (ej. *"Responde en 3 palabras"* y responde en 10).
+*   **Falla de Razonamiento:** Errores en lógica matemática o silogismos simples.
+
+## 1.6. Capacidades Emergentes y Scaling Laws
+Se ha descubierto que al aumentar tres variables, el modelo desarrolla capacidades que no tenía antes (como programar o razonar):
+1.  **Número de Parámetros:** El tamaño del cerebro (pesos de la red).
+2.  **Dataset de Entrenamiento:** La cantidad de "libros" leídos.
+3.  **Cómputo (FLOPs):** El tiempo y potencia de GPU invertidos.
+
+Esto dio lugar a los **LLMs (Large Language Models)**. Sin embargo, el curso se centra en cómo usar modelos "pequeños" (7B-9B parámetros) de forma eficiente mediante técnicas avanzadas.
+
+## 1.7. El Stack Tecnológico del Curso
+Para trabajar en NLP moderno, necesitamos un ecosistema específico:
+
+*   **Hugging Face:** El "GitHub" de la IA. Provee `transformers` (librería para cargar modelos), `datasets` y el `Hub` (donde están los modelos).
+*   **PyTorch:** El motor de cálculo tensorial más usado en investigación.
+*   **Accelerate:** Librería para gestionar la memoria de la GPU y el entrenamiento distribuido.
+*   **LangChain / LlamaIndex:** Orquestadores para conectar el modelo con datos externos (RAG) y herramientas.
+*   **Vector Databases (FAISS/Chroma):** Bases de datos optimizadas para buscar por significado semántico en lugar de por palabras clave.
+
+---
+
+### Dinámica de grupo sugerida para este bloque:
+1.  **Debate:** ¿Es la alucinación un error de software o una característica intrínseca de la creatividad del modelo?
+2.  **Visualización:** Usar herramientas como *Embedding Projector* para ver cómo se agrupan las palabras en el espacio.
+3.  **Análisis de Tokenización:** Probar diferentes frases en el tokenizador de Hugging Face para ver cómo se fragmentan palabras técnicas o legales.
+
+---
+
+### Notas para el instructor:
+Este bloque es fundamental para que el alumno entienda que el LLM **no piensa**, sino que **calcula probabilidades**. Sin esta base, no entenderán por qué necesitamos RAG (Bloque 3) o Tools (Bloque 4) para corregir el comportamiento del modelo.
+
+----- ARCHIVO: teoria/20_FineTuning.md -----
+
+Este es el desarrollo extenso del **Bloque 2: Fine-tuning y Entrenamiento Eficiente**. Este bloque es el núcleo técnico del curso, donde pasamos de ser usuarios de modelos a "entrenadores". Está diseñado para cubrir entre 6 y 8 horas de contenido teórico-práctico.
+
+---
+
+# Bloque 2: Fine-tuning y Entrenamiento Eficiente (PEFT)
+
+## 2.1. El Paradigma del Ajuste Fino (Fine-tuning)
+
+El entrenamiento de un LLM no es un proceso único, sino una escalera de refinamiento. Para entender el **SFT (Supervised Fine-Tuning)**, primero debemos ubicarlo en el ciclo de vida del modelo:
+
+1.  **Pre-training (Pre-entrenamiento):** El modelo aprende a predecir el siguiente token a partir de una cantidad masiva de datos (terabytes de texto). Aquí adquiere "conocimiento del mundo" y gramática, pero no sabe seguir instrucciones. Es un completador de frases.
+2.  **SFT (Supervised Fine-Tuning):** Es el proceso de entrenar al modelo en un dataset más pequeño y curado de pares **Instrucción -> Respuesta**. Aquí es donde el modelo aprende el formato de chat y a obedecer órdenes.
+3.  **Alignment (Alineación - RLHF/DPO):** Se ajusta el modelo para que sus respuestas sean seguras, útiles y honestas, basándose en preferencias humanas.
+
+### ¿Cuándo hacer Fine-tuning y cuándo no?
+Es un error común intentar usar Fine-tuning para inyectar conocimientos nuevos (ej. los detalles de un nuevo Real Decreto). Para eso es mejor el RAG (Bloque 3). El Fine-tuning se usa para:
+*   **Dominio del lenguaje:** Aprender terminología técnica o legal muy específica que no estaba en el pre-entrenamiento.
+*   **Formato y Estructura:** Forzar al modelo a responder siempre en un JSON específico, o con un tono académico extremadamente riguroso.
+*   **Restricciones de comportamiento:** Enseñar al modelo a ser extremadamente precavido y a decir "No lo sé" con mayor frecuencia.
+
+## 2.2. Ingeniería de Datos para Instrucciones
+
+En el SFT, **la calidad es infinitamente más importante que la cantidad**. 1.000 ejemplos perfectos son mejores que 100.000 ejemplos mediocres.
+
+### 2.2.1. Estructura de un Dataset de Instrucciones
+Un dataset típico de SFT (como el que usaremos en la práctica) tiene tres campos:
+*   **Instruction:** La tarea que debe realizar el modelo.
+*   **Input:** Contexto adicional (opcional).
+*   **Output:** La respuesta "dorada" o perfecta que el modelo debe imitar.
+
+### 2.2.2. Formatos de Prompt (Templates)
+Los modelos no ven el texto plano, lo ven dentro de una estructura. Los más comunes son:
+*   **Alpaca:** `### Instruction: ... ### Response: ...`
+*   **ChatML:** `<|im_start|>user ... <|im_end|> <|im_start|>assistant ...`
+*   **Gemma/Llama 3:** Usan etiquetas especiales como `<start_of_turn>` o `<|begin_of_text|>`.
+
+## 2.3. PEFT: Parameter-Efficient Fine-Tuning
+
+Entrenar un modelo de 9.000 millones de parámetros (9B) requeriría actualizar 9B de números en cada paso. Esto necesita cientos de gigabytes de VRAM. PEFT surge como la solución para entrenar modelos potentes en hardware accesible.
+
+### 2.3.1. LoRA (Low-Rank Adaptation)
+LoRA es la técnica más popular de PEFT. Su funcionamiento se basa en una hipótesis matemática: los cambios que necesita un modelo durante el fine-tuning tienen un "rango intrínseco bajo".
+
+**¿Cómo funciona?**
+En lugar de modificar la matriz de pesos original $W$ (que es enorme), LoRA congela $W$ y añade dos matrices pequeñas, $A$ y $B$, al lado.
+*   $W$ permanece intacta (no se entrena).
+*   Solo se entrenan $A$ y $B$.
+*   El resultado final es $W + (A \times B)$.
+
+**Ventajas:**
+*   Reducción del 99% de los parámetros entrenables.
+*   Menor uso de memoria.
+*   Los "adaptadores" resultantes pesan apenas unos megabytes, facilitando su distribución.
+
+### 2.3.2. QLoRA: Cuantización + LoRA
+QLoRA lleva la eficiencia al límite. Introduce tres innovaciones:
+1.  **4-bit NormalFloat (NF4):** Comprime los pesos del modelo original a solo 4 bits sin perder apenas precisión.
+2.  **Double Quantization:** Comprime incluso las constantes de cuantización.
+3.  **Paged Optimizers:** Gestiona los picos de memoria usando la RAM del sistema si la VRAM de la GPU se llena, evitando errores de "Out of Memory".
+
+**Resultado:** Podemos entrenar un modelo de 9B o incluso 13B en una sola GPU de consumo (como una RTX 3090 o 4090).
+
+## 2.4. Hiperparámetros Críticos en el Entrenamiento
+
+Para que el entrenamiento tenga éxito, debemos ajustar varios "pomos" técnicos:
+
+*   **Rank (r):** El tamaño de las matrices $A$ y $B$ en LoRA. Valores comunes: 8, 16, 32. Un $r$ más alto permite aprender tareas más complejas pero usa más memoria.
+*   **Lora Alpha ($\alpha$):** Un factor de escala para el aprendizaje. Normalmente se fija en el doble del Rank (si $r=16$, $\alpha=32$).
+*   **Learning Rate (Tasa de aprendizaje):** En SFT suele ser mucho más baja que en el pre-entrenamiento (ej. $2 \times 10^{-4}$). Si es muy alta, el modelo "olvida" lo que sabía (Catastrophic Forgetting).
+*   **Epochs (Épocas):** Cuántas veces el modelo ve el dataset completo. En SFT, entre 1 y 3 épocas suelen ser suficientes. Más de eso produce **Overfitting** (el modelo memoriza los ejemplos en lugar de aprender a razonar).
+
+## 2.5. Evaluación del Entrenamiento
+
+¿Cómo sabemos si el modelo ha mejorado?
+1.  **Train/Eval Loss:** La curva de pérdida debe descender. Si la pérdida de validación empieza a subir mientras la de entrenamiento baja, hay overfitting.
+2.  **Catastrophic Forgetting:** Debemos comprobar que el modelo no ha perdido habilidades básicas (ej. si después de entrenarlo en leyes, olvida cómo saludar o cómo sumar).
+3.  **Benchmark Cualitativo:** Comparar las respuestas del modelo base vs. el modelo entrenado ante las mismas preguntas "trampa" diseñadas en el Bloque 1.
+
+---
+
+### Conceptos Avanzados para Discusión:
+*   **Target Modules:** ¿A qué partes del Transformer aplicamos LoRA? (Normalmente a las capas de atención: `q_proj`, `v_proj`, `k_proj`, `o_proj`).
+*   **Gradient Accumulation:** Técnica para simular batches grandes cuando tenemos poca memoria VRAM.
+*   **FP16 vs BF16:** Formatos de precisión numérica. BF16 es preferible en GPUs modernas (Nvidia Ampere o superior) porque es más estable durante el entrenamiento.
+
+---
+
+### Notas para el instructor:
+Este bloque debe dejar claro que el Fine-tuning es un **cambio de comportamiento**, no una **actualización de base de datos**. Al terminar la teoría, los alumnos deben entender que van a "congelar" el cerebro de Gemma-2-9B y solo van a entrenar unas pequeñas capas adicionales (LoRA) para que el modelo aprenda a ser un "Asistente Académico Riguroso" que no inventa nada.
+
+----- ARCHIVO: teoria/30_RAG.md -----
+
+Este es el desarrollo extenso del **Bloque 3: Sistemas RAG (Retrieval-Augmented Generation)**. Este bloque representa el cambio de un modelo que "especula" a un modelo que "consulta". Es vital para aplicaciones profesionales donde la veracidad es innegociable.
+
+---
+
+# Bloque 3: Sistemas RAG bien diseñados
+
+## 3.1. El concepto de RAG: Superando la Memoria Paramétrica
+
+Los LLMs tienen dos tipos de "memoria":
+1.  **Memoria Paramétrica:** Todo el conocimiento adquirido durante el pre-entrenamiento (los pesos del modelo). Es estática y tiene una fecha de corte (*knowledge cutoff*).
+2.  **Memoria No Paramétrica:** Información externa que se le proporciona al modelo en el momento de la consulta.
+
+**RAG (Generación Aumentada por Recuperación)** es la arquitectura que permite al modelo consultar una biblioteca externa de documentos antes de generar una respuesta. En lugar de confiar en lo que "recuerda", el modelo lee los documentos relevantes y sintetiza una respuesta basada exclusivamente en ellos.
+
+### ¿Por qué RAG es superior al Fine-tuning para datos factuales?
+*   **Actualización inmediata:** Si un Real Decreto cambia hoy, solo hay que actualizar el documento en la base de datos, no reentrenar el modelo.
+*   **Trazabilidad:** RAG permite citar la fuente exacta (ej. "Según el Art. 14 del PDF X...").
+*   **Reducción de Alucinaciones:** Al forzar al modelo a usar un contexto dado, se minimiza la invención de datos.
+
+## 3.2. El Pipeline de Ingesta: Preparando el Conocimiento
+
+La calidad de un sistema RAG depende en un 80% de cómo se preparan los datos.
+
+### 3.2.1. Extracción de Texto
+No todos los documentos son iguales. Los PDFs (como los del BOE) son especialmente complejos debido a:
+*   Columnas múltiples.
+*   Tablas.
+*   Encabezados y pies de página que ensucian el contexto.
+*   Metadatos ocultos.
+
+### 3.2.2. Estrategias de Chunking (Fragmentación)
+Un modelo tiene una "ventana de contexto" limitada. No podemos pasarle un PDF de 200 páginas de golpe. Debemos dividirlo en trozos o **chunks**.
+
+*   **Fixed-size Chunking:** Dividir cada X caracteres o palabras. Es simple pero puede cortar una frase por la mitad.
+*   **Recursive Character Chunking:** Intenta dividir por párrafos, luego por frases y finalmente por palabras para mantener la unidad semántica.
+*   **Overlap (Solape):** Es fundamental mantener un pequeño porcentaje del fragmento anterior en el siguiente (ej. 10-20%) para que el contexto no se pierda en los cortes.
+
+### 3.2.3. Embeddings: La Representación Semántica
+Cada chunk se convierte en un vector numérico usando un modelo de **Embeddings** (como `all-MiniLM-L6-v2`). 
+*   Estos modelos están entrenados para que frases con significados similares (ej. "vacaciones retribuidas" y "descanso pagado") resulten en vectores que están cerca en el espacio matemático, aunque no compartan palabras exactas.
+
+## 3.3. El Pipeline de Recuperación (Retrieval)
+
+Cuando el usuario hace una pregunta, el sistema realiza los siguientes pasos:
+
+1.  **Vectorización de la consulta:** La pregunta del usuario se convierte en un vector usando el mismo modelo de embeddings.
+2.  **Búsqueda de Similitud (Vector Search):** Se comparan el vector de la pregunta con todos los vectores de la base de datos.
+3.  **Métricas de Distancia:** 
+    *   **Distancia Euclídea (L2):** Mide la distancia física entre puntos.
+    *   **Similitud de Coseno:** Mide el ángulo entre vectores (muy efectiva para texto).
+4.  **Top-K:** Se seleccionan los $K$ fragmentos más cercanos (generalmente entre 3 y 5).
+
+### Bases de Datos Vectoriales e Índices
+Para que la búsqueda sea instantánea entre millones de documentos, usamos librerías como **FAISS** (Facebook AI Similarity Search). FAISS utiliza estructuras de datos como **IVF** (Inverted File Index) o **HNSW** (Hierarchical Navigable Small World) para agrupar vectores y no tener que comparar la pregunta con cada uno de los chunks existentes.
+
+## 3.4. El Pipeline de Generación: Grounding y Prompting
+
+Una vez tenemos los fragmentos relevantes, el último paso es la **Generación**. Aquí es donde el LLM (Gemma-2-9B en nuestro caso) entra en juego.
+
+### 3.4.1. Construcción del Prompt con Contexto
+El prompt se estructura de forma que el modelo entienda que tiene una "fuente de verdad".
+Ejemplo:
+> "Eres un asistente legal. Basándote exclusivamente en el siguiente CONTEXTO, responde a la PREGUNTA. Si la respuesta no está en el contexto, di que no lo sabes.
+> CONTEXTO: {chunks_recuperados}
+> PREGUNTA: {pregunta_usuario}"
+
+### 3.4.2. Grounding (Anclaje)
+El grounding es la técnica de asegurar que el modelo no se desvíe del contexto. Un modelo bien "anclado" rechazará responder preguntas sobre cultura general si su contexto solo habla de convenios laborales.
+
+## 3.5. Problemas Comunes y RAG Avanzado
+
+Incluso un RAG bien diseñado puede fallar. Los problemas típicos son:
+
+1.  **Fallo en la Recuperación:** El sistema recupera chunks que no contienen la respuesta porque la pregunta era ambigua.
+2.  **Fallo en la Generación:** El sistema tiene la información correcta en el contexto pero el modelo alucina o la ignora.
+3.  **Lost in the Middle:** Los LLMs tienden a prestar más atención al principio y al final del contexto proporcionado, olvidando detalles que están en los chunks centrales.
+
+### Técnicas de Mejora (RAG de 2ª Generación)
+*   **Query Expansion:** El modelo reescribe la pregunta del usuario para que sea más fácil de buscar.
+*   **Re-ranking:** Se recuperan 20 chunks con un modelo rápido y luego un segundo modelo más inteligente (Cross-Encoder) los ordena para seleccionar los 3 mejores.
+*   **Hybrid Search:** Combinar búsqueda vectorial (semántica) con búsqueda tradicional por palabras clave (BM25), muy útil para encontrar códigos de artículos exactos o nombres propios.
+
+---
+
+### Dinámica de grupo sugerida:
+1.  **Visualización de Chunks:** Mostrar cómo un mismo texto cambia radicalmente su significado si el chunking corta una frase clave.
+2.  **Simulación de Búsqueda:** Pedir a los alumnos que busquen manualmente en un PDF y comparen su velocidad y precisión con el sistema RAG.
+3.  **Análisis de "No sé":** Forzar al sistema RAG a responder preguntas sobre temas que no están en los documentos y ajustar el prompt hasta que el modelo admita su ignorancia de forma consistente.
+
+---
+
+### Notas para el instructor:
+Este bloque es donde los alumnos verán la mayor mejora en la utilidad real del asistente. Es fundamental enfatizar que **un RAG es tan bueno como sus datos**. Si la extracción del PDF del BOE es mala, la respuesta será mala, por muy potente que sea el modelo Gemma. Se debe dedicar tiempo a explicar la importancia de los **metadatos** (saber de qué PDF y qué página viene cada chunk) para la auditoría posterior.
+
